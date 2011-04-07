@@ -1,5 +1,5 @@
 message-format: '+prefix+name+suffix&f: +message'
-censor-list: [ fuck, shit, rape, ass, asshole, cunt, bitch, slut, whore, dick, queef, cum, cumguzzler, dickmuncher, nigger, fucker, bullshit, buttpirate, butt-pirate, better drink my own piss, fucking ]
+censor-list: []
 censor-char: '*'
 censor-colored: true
 censor-color: '&7'

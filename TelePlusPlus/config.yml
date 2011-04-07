@@ -1,0 +1,49 @@
+log:
+    tp:
+        player: true
+        coords: true
+        here: true         
+        back: true
+        origin: true
+    others:
+        player: true
+        coords: true
+    world:
+        tp: true
+    jump:
+        top: false
+        up: false
+        jump: true
+    mod:
+        above: true
+        mass: true         
+        feather: true
+        bone: true
+notify:
+    tp:
+        player: true
+        coords: true
+        here: true         
+        back: true
+        origin: true
+    others:
+        player: true
+        coords: true
+    world:
+        tp: true
+    jump:
+        top: false
+        up: false
+        jump: true
+    mod:
+        above: true
+        mass: true         
+        feather: true
+        bone: true
+glassed:
+    fall-block-distance: 5
+    fall-immunity: true   
+    fall-immunity-seconds: 5        
+settings:
+    through-blocks: [0, 6, 8, 9, 10, 11, 37, 38, 39, 40, 50, 51, 55, 59, 69, 76 ]
+    show-notifications: true

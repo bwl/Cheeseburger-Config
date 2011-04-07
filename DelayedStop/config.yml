@@ -1,0 +1,19 @@
+# Configuration for ChatSensor
+#   - ddj 2011
+#
+
+
+### Labels ###
+labelsandcolors:
+    chat-prefix: '[DS]'
+    chat-prefix-color: '&d'
+    chat-message-color: '&e'
+    chat-highlighted-color: '&a'
+    ### Broadcast messages  ###
+broadcasttext:
+    time-left-message: 'The server will restart in @time-left@'
+    restart-cancelled-message: 'Server restart is cancelled!'
+    server-down-message: 'Server is shutting down!'
+    minute-text: 'minute(s)'
+    second-text: 'second(s)'
+    

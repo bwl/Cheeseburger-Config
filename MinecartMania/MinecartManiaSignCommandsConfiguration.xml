@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MinecartManiaConfiguration>
+    <version>1.1</version>
+    <!--The prefix displayed before all announcement messages are displayed to the player.-->
+    <AnnouncementSignPrefix>[Announcement]</AnnouncementSignPrefix>
+    <!--The color of the prefix. Valid Colors are: 
+	black, dark_blue, dark_green, dark_aqua, dark_red, dark_purple, gold, gray, dark_gray, blue, green, aqua, red, light_purple, yellow, white, -->
+    <AnnouncementSignPrefixColor>yellow</AnnouncementSignPrefixColor>
+    <!--The color of the message of the announcement-->
+    <AnnouncementColor>white</AnnouncementColor>
+    <!--The delay (in ticks. 20 ticks = 1 second) that sensors stay active after a minecart passes-->
+    <SensorDisabledDelay>8</SensorDisabledDelay>
+</MinecartManiaConfiguration>

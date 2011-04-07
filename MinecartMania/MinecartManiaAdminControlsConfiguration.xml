@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MinecartManiaConfiguration>
+    <version>1.2</version>
+    <!--After a minecart has been empty longer than the set time (in seconds) it will be destroyed. Negative values will disable the timer-->
+    <EmptyMinecartKillTimer>-1</EmptyMinecartKillTimer>
+    <!--After a storage minecart has been empty longer than the set time (in seconds) it will be destroyed. Negative values will disable the timer-->
+    <EmptyStorageMinecartKillTimer>-1</EmptyStorageMinecartKillTimer>
+    <!--After a powered minecart has been empty longer than the set time (in seconds) it will be destroyed. Negative values will disable the timer-->
+    <EmptyPoweredMinecartKillTimer>-1</EmptyPoweredMinecartKillTimer>
+    <!--Clicking on track with this item will cause it to cycle through all possible rail shapes.-->
+    <MinecartTrackAdjuster>270</MinecartTrackAdjuster>
+</MinecartManiaConfiguration>

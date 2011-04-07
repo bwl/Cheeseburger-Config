@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MinecartManiaConfiguration>
+    <version>1.0</version>
+    <!--If set to 0, Will prompt users for their intended direction when a player reaches an intersection. If set to 1, will prompt users only if the intersection has a station block underneath. If set to 2 players will never be prompted at intersections.-->
+    <IntersectionPrompts>0</IntersectionPrompts>
+    <!--0 - simple parsing with no pattern matching. 1 - simple pattern matching. 2 - full regex parsing.-->
+    <StationSignParsingMethod>0</StationSignParsingMethod>
+    <!--After passing one intersection, the /st command will not be cleared.-->
+    <StationCommandSavesAfterUse>false</StationCommandSavesAfterUse>
+</MinecartManiaConfiguration>

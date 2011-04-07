@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MinecartManiaConfiguration>
+    <version>1.2</version>
+    <!--The speed that minecarts are spawned at. 0 by default. For reference, 0.6 is full speed (and the speed launchers launch at).-->
+    <SpawnAtSpeed>0.0</SpawnAtSpeed>
+    <!--The delay (in milliseconds. 1000ms = 1s) between each minecart spawned at a chest dispenser.-->
+    <ChestDispenserSpawnDelay>1000</ChestDispenserSpawnDelay>
+</MinecartManiaConfiguration>

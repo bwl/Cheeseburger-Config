@@ -1,0 +1,7 @@
+enable-messages-error: true
+enable-messages-user: true
+enable-messages-help: true
+enable-messages-owner: false
+enable-protection-doors: true
+explosion-protection-all: false
+allow-admin-snoop: false

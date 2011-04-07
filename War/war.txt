@@ -1,0 +1,18 @@
+#Sun Apr 03 00:03:02 UTC 2011
+defaultAutoAssignOnly=false
+defaultLifePool=7
+defaultTeamCap=7
+defaultReward=272,1,0;
+defaultFriendlyFire=false
+pvpInZonesOnly=false
+spawnStyle=big
+defaultBlockHeads=true
+warzones=ctf,
+defaultDrawZoneOutline=true
+zoneMakers=
+buildInZonesOnly=false
+defaultNoCreatures=false
+defaultUnbreakableZoneBlocks=false
+warhub=
+defaultLoadout=272,1,0;261,1,1;262,7,2;257,1,3;273,1,4;
+defaultScoreCap=10

@@ -1,0 +1,10 @@
+regions:
+  rpg_spawn:
+    min: {z: -74.0, y: 43.0, x: -8.0}
+    flags: {}
+    max: {z: -16.0, y: 90.0, x: 44.0}
+    priority: 0
+    type: cuboid
+    owners:
+      players: [bwl]
+    members: {}

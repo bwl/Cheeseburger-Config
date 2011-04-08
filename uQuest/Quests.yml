@@ -48,7 +48,7 @@
 2:
   Name: GetRedstone
   Start_Info: Please gather me a bunch of redstone!
-  Finish_Info: It’s electric!
+  Finish_Info: Its electric!
   Rewards:
     Money: 300
   Objectives:
@@ -163,7 +163,7 @@
 9:
   Name: The Knights who say... Icky Icky Pa-tang! (Part III)
   Start_Info: Cut down the mightiest tree in the forest. With a herring!
-  Finish_Info: Thank goodness you didn't say that word!
+  Finish_Info: Thank goodness you didn''t say that word!
   Rewards:
     Money: 300
     Item:
@@ -327,7 +327,7 @@
 18:
   Name: The Black Knight (Part II)
   Start_Info: None shall pass!
-  Finish_Info: 'tis but a scratch!
+  Finish_Info: ''tis but a scratch!
   Rewards:
     Money: 300
     Item:
@@ -357,13 +357,13 @@
         Durability: 0
 20:
   Name: Bring out your dead!
-  Start_Info: I'm not dead yet!
-  Finish_Info: I'm getting better!
+  Start_Info: I''m not dead yet!
+  Finish_Info: I''m getting better!
   Rewards:
     Money: 200
     Item:
       Item_ID: 314
-      Display_Name: King's Crown
+      Display_Name: King''s Crown
       Amount: 1
       Durability: 0
   Objectives:
@@ -465,7 +465,7 @@
         Durability: 0
 26:
   Name: Nightlife
-  Start_Info: I’m scared of the dark! Make me Torches
+  Start_Info: Im scared of the dark! Make me Torches
   Finish_Info: Yay, No more mob spawning here!
   Rewards:
     Money: 300
@@ -479,8 +479,8 @@
         Durability: 0
 27:
   Name: Good Times With Weapons
-  Start_Info: Hey hey, let's go! Getting in a fight!
-  Finish_Info: Let's fighting loooove!
+  Start_Info: Hey hey, let''s go! Getting in a fight!
+  Finish_Info: Let''s fighting loooove!
   Rewards:
     Money: 100
     Item:
@@ -579,7 +579,7 @@
 32:
   Name: A Ladder to Heaven.
   Start_Info: Where were you when they built a ladder to heeeaaaven?
-  Finish_Info: I'm a lil bit couuuntry. I'm a lil bit rock and rollll-uh!
+  Finish_Info: I''m a lil bit couuuntry. I''m a lil bit rock and rollll-uh!
     Rewards:
       Money: 300
       Item:
@@ -819,7 +819,7 @@
         Amount: 1
         Durability: 0
 47:
-  Name: That’s a biggun.
+  Name: That''s a biggun.
   Start_Info: Kill a giant!
   Finish_Info: Tiiimbeeeer!
   Rewards:
@@ -870,8 +870,8 @@
         Durability: 0
 51:
   Name: Log Cabin
-  Start_Info: I'm building a log cabin. Get me some wood.
-  Finish_Info: Here's some Birch! It will be such a flammable house... :)
+  Start_Info: Im building a log cabin. Get me some wood.
+  Finish_Info: Heres some Birch! It will be such a flammable house... :)
   Rewards: 
     Money: 200
     Item:
@@ -998,8 +998,8 @@
         Amount: 15
         Durability: 0
 53:
-  Name: Father Cornello's Secret
-  Start_Info: It's not time yet, Rose.
+  Name: Father Cornello''s Secret
+  Start_Info: It''s not time yet, Rose.
   Finish_Info: Do you have the courage to face the truth?
   Rewards:
     Money: 500
@@ -1020,12 +1020,12 @@
       Type: Gather
       Item:
         Item_ID: 331
-        Display_Name: Fake Philosopher's Stone Powder
+        Display_Name: Fake Philosopher''s Stone Powder
         Amount: 32
         Durability: 0
 54:
-  Name: Winry's Gift
-  Start_Info: Find me what I need and I'll get started!
+  Name: Winry''s Gift
+  Start_Info: Find me what I need and I''ll get started!
   Finish_Info: Come back and see me sometime, will ya!?
   Rewards:
     Item:
@@ -1108,7 +1108,7 @@
 56:
   Name: Bound to a Hollow Shell
   Start_Info: They may have taken his body...
-  Finish_Info: ...but they'll never take his soul!
+  Finish_Info: ...but they''ll never take his soul!
   Rewards:
     Item:
       0:
@@ -1177,7 +1177,7 @@
 56:
   Name: Libyans!
   Start_Info: Build a Delorean. Hit 88mph! Fix history!
-  Finish_Info: Whoa. That's heavy, Doc.
+  Finish_Info: Whoa. That''s heavy, Doc.
   Rewards:
     Money: 7500
     Item:
@@ -1188,7 +1188,7 @@
         Durability: 0
       1:
         Item_ID: 340
-        Display_Name: Gray's Sports Almanac
+        Display_Name: Gray''s Sports Almanac
         Amount: 1
         Durability: 0
       2:
@@ -1242,7 +1242,7 @@
 57:
   Name: Santa Claus is Coming to Town
   Start_Info: Frosty needs a little help.
-  Finish_Info: Must’ve been some magic in that leather hat you found.
+  Finish_Info: Mustve been some magic in that leather hat you found.
   Rewards:
     Money: 400
   Objectives:
@@ -1284,7 +1284,7 @@
 58:
   Name: Hoe-down!
   Start_Info: 1 of every type! Surely I must be joking!
-  Finish_Info: Now wasn't that worth it... sorry for calling you Shirley.
+  Finish_Info: Now wasn''t that worth it... sorry for calling you Shirley.
   Rewards:
     Money: 2500
     Item:

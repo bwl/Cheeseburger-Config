@@ -7,7 +7,7 @@ System:
     Currency: bwlBuck
     Currency_Plural: bwlBucks
     # The initial balance a player logs on with
-    Initial_Balance: 30.0
+    Initial_Balance: 100.0
     # Should we log transactions?
     Logging:
         # Logging is logged to a database table named [table]_Transactions

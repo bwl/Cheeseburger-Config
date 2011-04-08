@@ -10,6 +10,9 @@ worlds:
         worldBlacklist: ''
         playerBlacklist: ''
         playerWhitelist: ''
+        editWhitelist: ''
+        editBlacklist: ''
+        blockBlacklist: ''
     creative:
         animals: false
         spawn: 3185:72:-1551:50.736416:-1.623566
@@ -21,6 +24,9 @@ worlds:
         worldBlacklist: ''
         playerBlacklist: ''
         playerWhitelist: ''
+        editWhitelist: ''
+        editBlacklist: ''
+        blockBlacklist: ''
     survival:
         animals: true
         spawn: -429:68:176:0.0:0.0
@@ -32,6 +38,9 @@ worlds:
         worldBlacklist: ''
         playerBlacklist: ''
         playerWhitelist: ''
+        editWhitelist: ''
+        editBlacklist: ''
+        blockBlacklist: ''
     reddit:
         animals: true
         spawn: -272:64:-115:0.0:0.0
@@ -43,6 +52,9 @@ worlds:
         worldBlacklist: ''
         playerBlacklist: ''
         playerWhitelist: ''
+        editWhitelist: ''
+        editBlacklist: ''
+        blockBlacklist: ''
     nether:
         animals: true
         spawn: -250:67:-86:149.36787:12.176745
@@ -54,3 +66,6 @@ worlds:
         worldBlacklist: ''
         playerBlacklist: ''
         playerWhitelist: ''
+        editWhitelist: ''
+        editBlacklist: ''
+        blockBlacklist: ''

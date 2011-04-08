@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MinecartManiaConfiguration>
+	<version>1.0</version>
+	<!--
+	Keys are mapped to specific locations in MM's code. Do not add or remove keys unless you know what you are doing.
+	The text is the text that is displayed to the user. You are free to change the text to anything to suit your needs.
+	Note: %s, %d, and %f are variable formatting characters. Look up their usage online if you are unsure.
+
+	Colors: 
+	
+	[WHITE]
+	[BLACK]
+	[DARK_BLUE]
+	[DARK_GREEN]
+	[DARK_AQUA]
+	[DARK_PURPLE]
+	[GOLD]
+	[GRAY]
+	[DARK_GRAY]
+	[BLUE]
+	[GREEN]
+	[AQUA]
+	[RED]
+	[LIGHT_PURPLE]
+	[YELLOW]
+	
+	-->
+	<TextKeys>
+		<TextKey>
+			<Key>AutoCartEnteredMessage</Key>
+			<Text>[GREEN]Tap the minecart in the direction you want to go</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsValidDebugModes</Key>
+			<Text>[RED]Valid Debug Modes: %s</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsDebugMode</Key>
+			<Text>[GREEN]Switched to debug mode: %s</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsNoPlayerFound</Key>
+			<Text>[RED]No player matches that name</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsEjectUsage</Key>
+			<Text>[RED]Proper Usage: '/eject [player name]'</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsPermEjectUsage</Key>
+			<Text>[RED]Proper Usage: '/permeject [player name]'</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsMinecartsRemoved</Key>
+			<Text>[GREEN]%d minecarts were removed from the server successfully.</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsInvalidValue</Key>
+			<Text>[RED]Invalid Configuration Value</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsSetConfigKeyUsage</Key>
+			<Text>[RED]Proper Usage: '/setconfigkey [key] [value]'. \nHint: The key and value should be surrounded by brackets.</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsMomentum</Key>
+			<Text>Momentum X: %.2f \nMomentum Y: %.2f \nMomentum Z: %.2f</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsMomentumInvalid</Key>
+			<Text>[RED]You can only have momentum inside a minecart.</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsStation</Key>
+			<Text>[GREEN]Station Type set to: %s</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsConfigKey</Key>
+			<Text>The value of '%s' is '%s'</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsConfigKeyUsage</Key>
+			<Text>[RED]Proper Usage: '/getconfigkey [key]'. \nHint: The key should be surrounded by brackets.</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsListConfigKeyPageHeader</Key>
+			<Text>Minecart Mania Configuration Values (Page %d of %d)</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsListConfigKey</Key>
+			<Text>Key: [GREEN]%s [WHITE]Value: [GREEN]%s</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsSetConfigKey</Key>
+			<Text>Key '[GREEN]%s[WHITE]' set to '[GREEN]%s[WHITE]'</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsListConfigKeyPage</Key>
+			<Text>[RED]There is no page %d</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsThrottleSet</Key>
+			<Text>[GREEN]Throttle set!</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsThrottleSetOverdrive</Key>
+			<Text>[GREEN]Overdrive Enabled!</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsThrottleUsage</Key>
+			<Text>[RED]Invalid command. Correct usage is /throttle [number]</Text>
+		</TextKey>
+		<TextKey>
+			<Key>AdminControlsBlockMinecartEntry</Key>
+			<Text>[RED]You've been restricted from entering that minecart!</Text>
+		</TextKey>
+		<TextKey>
+			<Key>SignCommandsMinecartLocked</Key>
+			<Text>[YELLOW]Your Minecart Has been Locked.</Text>
+		</TextKey>
+		<TextKey>
+			<Key>SignCommandsMinecartUnlocked</Key>
+			<Text>[GREEN]Your Minecart Has Been Unlocked</Text>
+		</TextKey>
+		<TextKey>
+			<Key>SignCommandsMinecartLockedError</Key>
+			<Text>[YELLOW]Your minecart is locked. \n[YELLOW]It will unlock when you reach your destination.</Text>
+		</TextKey>
+		<TextKey>
+			<Key>SignCommandsDestination</Key>
+			<Text>[GREEN]LOcalYou've arrived at your destination</Text>
+		</TextKey>
+		<TextKey>
+			<Key>SignCommandsSensorItemError</Key>
+			<Text>[RED]Item Sensors Must Have a Valid Item Name or id, On Line 3</Text>
+		</TextKey>
+		<TextKey>
+			<Key>SignCommandsSensorPlayerNameError</Key>
+			<Text>[RED]Player Name Sensors Must Have The Name Of The Player To Detect, On Line 3</Text>
+		</TextKey>
+		<TextKey>
+			<Key>SignCommandsSensorSuccess</Key>
+			<Text>[GREEN]Sensor Successfully Created</Text>
+		</TextKey>
+		<TextKey>
+			<Key>StationsTapInDirection</Key>
+			<Text>[YELLOW]Tap your minecart in the desired direction</Text>
+		</TextKey>
+		<TextKey>
+			<Key>StationsInvalidDirection</Key>
+			<Text>[RED]Not a valid direction.</Text>
+		</TextKey>
+		<TextKey>
+			<Key>StationsValidDirections</Key>
+			<Text>[YELLOW]You can go %s</Text>
+		</TextKey>
+	</TextKeys>
+</MinecartManiaConfiguration>

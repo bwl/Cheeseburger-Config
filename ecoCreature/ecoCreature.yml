@@ -9,20 +9,18 @@
 #
 # Which economy system are you running? There are currently two enabled out of three.
 # 1 for iConomy
-# 2 for BOSEconomy (support added, not yet fixed)
+# 2 for BOSEconomy
 # 3 for Essentials Economy *** ESSTC IS THE TEMPORARY FIX FOR NAMING YOUR ESSENTIALS CURRENCY! ***
 #
 # IntegerCurrency set to true will round the reward to a whole number, no decimals.
 # While if it is set to false, it will give rewards with a decimal value.
 #
-# VIPGain is a new and special thing that may apply to your most valued members.
-# If you add the permission ecoCreature.Rewarding.VIP to a player or group, it will allow
-# them some extra income. It is defined in percentage, and really only useful when IntegerCurrency
-# is set to FALSE.
-#
 # AllowCamping should be set to false, it will prevent camping around mobspawners / dungeons etc.
 # This setting is followed by CampRadius - what it does is that it prevents camping within the set
 # amount of blocks in all directions.
+#
+# OverrideDrops, if set to true... default drops will be overriden by the drops specified
+# for ecoCreature.
 #
 # BowRewards
 # The bow and arrow is a dangerous weapon and can be considered overpowered in some way.
@@ -39,31 +37,50 @@
 #
 # Message Options!
 # ----------------
-# Output: Should you notify the player of rewards, penalties or no rewards? Defaults to true - to notify.
-# Spawner: When accidently killing around the spawn, a player can be notified of a nearby dungeon.
+# Output :: Should you notify the player of rewards, penalties or no rewards? Defaults to true - to notify.
+# NoReward :: If set to true, it will output a message to the player, stating he got no reward, false will not
+# output anything to the player when they get no reward.
+# Spawner :: When accidently killing around the spawn, a player can be notified of a nearby dungeon.
 # Having this option set to false will not send them the spawn/mobspawn camping message.
+#
+# Extra Hooks!
+# ------------
+# Unfinished business.
+#
+# Gains!
+# -----
+# These are per group on your server, if a player is in a group called Donors in your permissions
+# they will gain the base amount * value specified in the amount bit for the group.
+# You may freely add additional groupnames and specify your own amount here.
 System:
     Economics:
         Which: 1
         ESSTC: 'Simoleon'
         IntegerCurrency: false
-        VIPGain: 25
     Hunting:
         AllowCamping: false
+        OverrideDrops: true
         CampRadius: 15
         BowRewards: true
         PenalizeDeath: true
-        PenalizePercent: 5
+        PenalizePercent: 3
         AllowUnderSeaLVL: true
     Messages:
         Output: true
+        NoReward: true
         Spawner: false
         NoCampMessage: '[$4Warning$f] Camping around the Monster Spawn gives no rewards.'
         NoBowMessage: '[$9???$f] You can''t seem to find any currency on this creature.'
         DeathPenaltyMessage: 'You wake up to find that $6%c $fis missing from your pockets!'
     ExtraHooks:
         uQuest: false
-#### UQUEST HOOK IS NOT DONE YET ####
+        #### UQUEST HOOK IS NOT DONE YET ####
+
+Gain:
+    Default:
+        Amount: 1
+    Donors:
+        Amount: 2.5
 
 # HOW DO I DROPS!?
 #     - format: 'item:amount:percent'
@@ -100,26 +117,26 @@ System:
 RewardTable:
     Creeper:
         Drops: '289:3:20'
-        Coin_Minimum: 5.00
-        Coin_Maximum: 50.00
+        Coin_Minimum: 0.01
+        Coin_Maximum: 10.00
         Coin_Percent: 100
         NoReward_Message: '[$9!$f] The $c%m $fdies from a blow with your $3%i'
         Reward_Message: '[$2:)$f] You have been awarded $6%c $ffor slaying a $c%m'
         Penalty_Message: '[$4:($f] You have been penalized with a deduction of $6%c $ffor slaying a $c%m'
 
     Skeleton:
-        Drops: '352:2:50;262:2:50'
-        Coin_Minimum: 1.00
-        Coin_Maximum: 45.00
-        Coin_Percent: 45
+        Drops: '352:2:30;262:2:30'
+        Coin_Minimum: 0.05
+        Coin_Maximum: 10.00
+        Coin_Percent: 35
         NoReward_Message: '[$9!$f] The $c%m $fdies from a blow with your $3%i'
         Reward_Message: '[$2:)$f] You have been awarded $6%c $ffor slaying a $c%m'
         Penalty_Message: '[$4:($f] You have been penalized with a deduction of $6%c $ffor slaying a $2%m'
 
     Zombie:
         Drops: '288:2:30'
-        Coin_Minimum: 0.90
-        Coin_Maximum: 12.00
+        Coin_Minimum: 0.01
+        Coin_Maximum: 6.00
         Coin_Percent: 65
         NoReward_Message: '[$9!$f] The $c%m $fdies from a blow with your $3%i'
         Reward_Message: '[$2:)$f] You have been awarded $6%c $ffor slaying a $c%m'
@@ -127,18 +144,18 @@ RewardTable:
 
     Spider:
         Drops: '287:1:10'
-        Coin_Minimum: 2.00
-        Coin_Maximum: 9.70
-        Coin_Percent: 30
+        Coin_Minimum: 0.01
+        Coin_Maximum: 6.70
+        Coin_Percent: 10
         NoReward_Message: '[$9!$f] The $c%m $fdies from a blow with your $3%i'
         Reward_Message: '[$2:)$f] You have been awarded $6%c $ffor slaying a $c%m'
         Penalty_Message: '[$4:($f] You have been penalized with a deduction of $6%c $ffor slaying a $2%m'
 
     PigZombie:
-        Drops: '320:2:5;288:2:30'
-        Coin_Minimum: 100.00
-        Coin_Maximum: 500.00
-        Coin_Percent: 1
+        Drops: '320:2:3;288:2:10'
+        Coin_Minimum: 0.01
+        Coin_Maximum: 20.00
+        Coin_Percent: 20
         NoReward_Message: '[$9!$f] The $c%m $fdies from a blow with your $3%i'
         Reward_Message: '[$2:)$f] You have been awarded $6%c $ffor slaying a $c%m'
         Penalty_Message: '[$4:($f] You have been penalized with a deduction of $6%c $ffor slaying a $2%m'
@@ -180,19 +197,19 @@ RewardTable:
         Penalty_Message: '[$4:($f] You have been penalized with a deduction of $6%c $ffor slaying a $2%m'
 
     Cow:
-        Drops: '334:2:65'
+        Drops: '334:2:45'
         Coin_Minimum: 0.01
         Coin_Maximum: 3.00
-        Coin_Percent: 10
+        Coin_Percent: 40
         NoReward_Message: '[$9!$f] The $2%m $fdies from a blow with your $3%i'
         Reward_Message: '[$2:)$f] You have been awarded $6%c $ffor slaying a $2%m'
         Penalty_Message: '[$4:($f] You have been penalized with a deduction of $6%c $ffor slaying a $2%m'
 
     Pig:
-        Drops: '319:2:70'
+        Drops: '319:2:45'
         Coin_Minimum: 0.01
         Coin_Maximum: 2.50
-        Coin_Percent: 10
+        Coin_Percent: 100
         NoReward_Message: '[$9!$f] The $2%m $fdies from a blow with your $3%i'
         Reward_Message: '[$2:)$f] You have been awarded $6%c $ffor slaying a $2%m'
         Penalty_Message: '[$4:($f] You have been penalized with a deduction of $6%c $ffor slaying a $2%m'
@@ -201,13 +218,13 @@ RewardTable:
         Drops: ''
         Coin_Minimum: 0.01
         Coin_Maximum: 1.50
-        Coin_Percent: 10
+        Coin_Percent: 15
         NoReward_Message: '[$9!$f] The $2%m $fdies from a blow with your $3%i'
         Reward_Message: '[$2:)$f] You have been awarded $6%c $ffor slaying a $2%m'
         Penalty_Message: '[$4:($f] You have been penalized with a deduction of $6%c $ffor slaying a $2%m'
 
     Squid:
-        Drops: '351:2:65'
+        Drops: '351:2:35'
         Coin_Minimum: 0.04
         Coin_Maximum: 4.75
         Coin_Percent: 5
@@ -227,8 +244,8 @@ RewardTable:
     Spawner:
         Drops: ''
         Coin_Minimum: 0.01
-        Coin_Maximum: 0.04
-        Coin_Percent: 1
+        Coin_Maximum: 30.00
+        Coin_Percent: 100
         NoReward_Message: '[$9!$f] The $2%m $fexplodes from a blow with your $3%i'
         Reward_Message: '[$2:)$f] You have been awarded $6%c $ffor slaying a $2%m'
         Penalty_Message: '[$4:($f] You have been penalized with a deduction of $6%c $ffor slaying a $2%m'
@@ -236,7 +253,7 @@ RewardTable:
 DidYou:
     Read:
         Understand:
-            Configure: true
+            Configure: false
 
 # If you have now reached this point of the ecoCreature.yml file, you may of have noticed the last entry.
 # Switch the Configure: false to Configure: true

@@ -1,0 +1,29 @@
+Command:
+  Ignore:
+    Delay: 120
+  Spawn:
+    Max: 50
+Message:
+  PlayerFoundBoss:
+    ToPlayer: '&cYou attacked a Corrupted {BOSSNAME} boss!'
+    ToOthers: '&c{PLAYER} found a Corrupted {BOSSNAME}!'
+  BossFoundPlayer:
+    ToPlayer: '&cA Corrupted {BOSSNAME} found you!'
+    ToOthers: '&cA Corrupted {BOSSNAME} found {PLAYER}!'
+  Proximity: '&4You sense a magical disruption...'
+  ViewerMessage: 'Corrupted {BOSSNAME} Health: {HEALTH} (-{DAMAGE})'
+  ViewerDefeated: Corrupted {BOSSNAME} has been defeated.
+  ViewerDamageAbsorbed: Corrupted {BOSSNAME}'s armour absorbed the damage.
+Task:
+  DrawBossEffect: 1.0
+  CheckEntityProximity: 0.5
+  CheckEntityExistence: 2.0
+  SavePlayerData: 600.0
+  LoadPlayerData: 5.0
+Boss:
+  OverwriteDrops: false
+  SetHealthAsMultiplier: true
+  SetDamageAsMultiplier: true
+  SetExperienceAsMultiplier: true
+CheckUpdateOnStartup: true
+ConfigVersion: 2.1.1

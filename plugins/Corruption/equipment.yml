@@ -1,0 +1,53 @@
+diamond:
+  Helmet:
+    diamond_helmet:
+      Enabled: true
+      ItemId: 310
+      Probability: 50
+      ItemData: 0
+      ItemDurability: 0
+      DropProbability: 50
+  Chestplate:
+    diamond_chestplate:
+      Enabled: true
+      ItemId: 311
+      Probability: 100
+      ItemData: 0
+      ItemDurability: 0
+      DropProbability: 50
+  Leggings:
+    diamond_leggings:
+      Enabled: true
+      ItemId: 312
+      Probability: 100
+      ItemData: 0
+      ItemDurability: 0
+      DropProbability: 50
+  Boots:
+    diamond_boots:
+      Enabled: true
+      ItemId: 313
+      Probability: 50
+      ItemData: 0
+      ItemDurability: 0
+      DropProbability: 50
+  Weapon:
+    diamond_sword:
+      Enabled: true
+      ItemId: 276
+      Probability: 100
+      ItemData: 0
+      ItemDurability: 0
+      DropProbability: 50
+      Enchantments:
+        knockback:
+          Enabled: true
+          Enchantment: Knockback
+          Probability: 30
+          Level: 2
+        sharpness:
+          Enabled: true
+          Enchantment: Damage All
+          Probability: 50
+          Level: 3
+ConfigVersion: 2.1.1

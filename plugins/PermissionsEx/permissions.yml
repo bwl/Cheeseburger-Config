@@ -1,0 +1,57 @@
+groups:
+  default:
+    default: true
+    permissions:
+    - -bukkit.command.plugins
+    - hsp.command.spawn
+    - hsp.command.home
+    - hsp.command.sethome
+    - herochat.speak.global
+    - herochat.emote.global
+    - herochat.emote
+    - herochat.msg
+    - herochat.pm
+    - herochat.me
+    - commandbook.me
+    - commandbook.away
+    - commandbook.motd
+    - commandbook.who
+    prefix: '&7'
+    options:
+      rank: '900'
+  associate:
+    permissions:
+    - commandbook.gamemode
+    prefix: '&3'
+    inheritance:
+    - default
+    options:
+      rank: '600'
+  mod:
+    permissions:
+    - commandbook.*
+    - worldedit.*
+    - worldguard.*
+    - spectate.use
+    - permissions.user.promote.default
+    - permissions.user.demote.default
+    prefix: '&2'
+    inheritance:
+    - associate
+    options:
+      rank: '400'
+  admin:
+    prefix: '&c'
+    inheritance:
+    - staff
+    permissions:
+    - hsp.command.setspawn
+    - hsp.command.setfirstspawn
+    - spectate.cantspectate
+    - permissions.*
+    options:
+      rank: '200'
+users:
+  bwl:
+    group:
+    - admin

@@ -12,3 +12,5 @@ plugins/CommandBook/bans.*
 plugins/CommandBook/sessions/*
 plugins/WorldEdit/worldedit.log
 plugins/WorldEdit/worldedit.log.*
+plugins/Herochat/chatters/*
+plugins/Herochat/logs/*

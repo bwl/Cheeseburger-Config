@@ -1,0 +1,25 @@
+# Alchemist Configuration
+
+messages:
+  cooldownnotexpired: You've already had your turn. Come back later!
+  initializationmessage: §eHello there, <player>. Give me what I need and I will brew you a potion!
+  successmessage: §eI have combined the ingredients to concoct a potion of §a<potion>§e.
+cooldowninseconds: 60
+recipes:
+  default:
+    result:
+      effect: fire-resistance
+      duration: 60
+      amplifier: 1
+      splash: false
+    ingredients:
+      '0':
+        name: sugar
+        amount: 1
+      '1':
+        name: glass-bottle
+        amount: 1
+      '2':
+        name: wool
+        amount: 1
+        data: 6

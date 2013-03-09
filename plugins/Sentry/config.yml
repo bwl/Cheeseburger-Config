@@ -1,0 +1,148 @@
+#Sentry configuration
+
+#Server-wide options for Sentry
+Server:
+ #If true Sentries will die like normal mobs, instead of being despawned. Player-type Sentry deaths will be announced in chat.
+ DieLikePlayers: false
+ #The amount of EXP sentries drop. Only works if Drops is turned on.
+ ExpValue: 5
+ #This is how often, in ticks, the Sentry performs his interal logic looking for targets, etc. Increasing this value may lighten server load, 
+ #but will decrease Sentries responsiveness and maximum rate of fire.
+ LogicTicks: 10
+
+#Default stats for new Sentries
+DefaultStats:
+ Strength: 1
+ Armor: 0
+ Speed: 1.0
+ Health: 20
+ AttackRate: 2.0
+ HealRate: 0.0
+ NightVision: 16
+ Range: 10
+ WarningRange: 0
+ Respawn: 10
+ 
+#Default options for new Sentries
+DefaultOptions:
+ Drops: false
+ Criticals: true
+ Invincible: false
+ Retaliate: true
+ FriendlyFire: false
+ 
+#Default texts for new Sentries. You can use <NPC> and <PLAYER> as placeholders.
+DefaultTexts:
+ Warning: "&c<NPC> says Halt! Come no closer!"
+ Greeting: "&a<NPC> says Welcome, <PLAYER>"
+ 
+#Default target list for new Sentries. 
+DefaultTargets:
+ #- entity:monster
+
+ 
+#Default ignore list for new Sentries
+DefaultIgnores:
+ #- entity:owner
+
+
+#Configurable messages used by all Sentries. You can use <NPC>, <PLAYER>, <ITEM>, and <AMOUNT> as placeholders. Remove a message or set it to "" to prevent it from displaying at all.
+GlobalTexts:
+ Miss: "&7*** You MISS <NPC>."
+ Hit: "&f*** You hit <NPC> for <AMOUNT> damage."
+ Crit1: "&e*** You injure <NPC> for <AMOUNT> damage."
+ Crit2: "&6*** You MAIM <NPC> with your <ITEM> for <AMOUNT> damage."
+ Crit3: "&c*** You DISEMBOWEL <NPC> with your <ITEM> for <AMOUNT> damage."
+ Block: "&7*** You fail to penetrate <NPC>'s armor."
+ Glance: "&7*** Your blow glances off <NPC> for <AMOUNT> damage."
+ 
+#These are the percentage chancees of doing a certain damage to a Sentry if Criticals is turned on. Whole numbers only. Remove or Set to 0 to disable a hit type.
+HitChances:
+ Miss: 4
+ Glance: 4
+ Crit1: 6
+ Crit2: 4
+ Crit3: 2
+ 
+#Set the item used by each type of Sentry. Use item name or id #. 
+#Remove an entry to disable that attack type. Any other item makes a Brawler.
+AttackTypes:
+ Archer: BOW
+ Pyro1: REDSTONE_TORCH_ON
+ Pyro2: TORCH
+ Pyro3: BLAZE_ROD
+ Bombardier: EGG
+ IceMagi: SNOW_BALL
+ StormCaller1: PAPER
+ StormCaller2: BOOK
+ StormCaller3: BOOK_AND_QUILL
+ #Note Witch Doctors need a potion equipped to know what to throw!
+ WitchDoctor: POTION
+ Warlock1: ENDER_PEARL
+ Warlock2: SKULL_ITEM
+
+#The following items will ADD to the sentry's base armor. 
+#Decimals are allowed but all minecraft damge is in integers. 
+#You would need 2 items of 0.3 Armor buff to add 1 point of armor.
+ArmorBuffs:
+ #- IRON_HELMET 1.0
+ #- DIAMOND_CHESTPLATE 4.0
+ 
+#The following items will ADD to the sentry's base strength. 
+StrengthBuffs:
+ #- IRON_SWORD 1
+ #- TORCH 5
+
+#The following items will ADD to the sentry's base speed. 
+SpeedBuffs:
+ #- LEATHER_BOOTS 0.2
+ #- IRON_BOOTS -0.1
+
+#Apply potion effects on hit for various weapon types. Multiple effects allowed. 
+#Use format: [item name/id] [potion name/id:duration in ticks:level] There are 20 ticks in a second. 
+#Duration and Level are optional, default duration is 20, level is 1.
+#Valid potion names: 
+#speed, slow, fast_digging, slow_digging, increase_damage, heal, harm, jump, confusion, 
+#regeneration, damage_resistance, fire_resistance, water_breating, blindness, hunger, weakness, poison
+WeaponEffects:
+ - SNOW_BALL slow:20
+ #- GOLD_SWORD poison:60:2 confusion
+ 
+ 
+  
+#The lists below control what items are equipped as armor. These should only be changed to disable specific armors or add extended (i.e. Spout) items.
+ 
+#The following items will be equipped as helmets, can use name or id #
+Helmets:
+   - PUMPKIN
+   - JACK_O_LANTERN
+   - LEATHER_HELMET
+   - CHAINMAIL_HELMET
+   - GOLD_HELMET
+   - IRON_HELMET
+   - DIAMOND_HELMET
+   
+#The following items will be equipped as chestplates, can use name or id #.
+Chestplates:
+    - LEATHER_CHESTPLATE
+    - CHAINMAIL_CHESTPLATE
+    - GOLD_CHESTPLATE
+    - IRON_CHESTPLATE
+    - DIAMOND_CHESTPLATE
+  
+#The following items will be equipped as leggings, can use name or id #
+Leggings:
+    - LEATHER_LEGGINGS
+    - CHAINMAIL_LEGGINGS
+    - GOLD_LEGGINGS
+    - IRON_LEGGINGS
+    - DIAMOND_LEGGINGS
+    
+#The following items will be equipped as boots, can use name or id #
+Boots:  
+    - LEATHER_BOOTS
+    - CHAINMAIL_BOOTS
+    - GOLD_BOOTS
+    - IRON_BOOTS
+    - DIAMOND_BOOTS
+    

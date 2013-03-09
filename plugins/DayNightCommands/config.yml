@@ -1,0 +1,7 @@
+check-frequency: 20
+worlds:
+  world:
+    day:
+    - give * cookie
+    night:
+    - give * torch 16

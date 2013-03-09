@@ -20,3 +20,9 @@ plugins/PluginMetrics/
 plugins/Quests/data/*.yml
 plugins/mcMMO/FlatFileStuff/mcmmo.users
 plugins/mcMMO/backup/*.zip
+
+plugins/HomeSpawnPlus/debug.log
+
+plugins/HomeSpawnPlus/debug.log.1
+
+plugins/HomeSpawnPlus/HomeSpawnPlus.db

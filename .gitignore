@@ -1,0 +1,10 @@
+banned-ips.txt
+banned-players.txt
+ops.txt
+white-list.txt
+ignore/
+world/
+world_nether/
+world_the_end/
+
+server.log

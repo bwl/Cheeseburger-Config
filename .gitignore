@@ -18,3 +18,5 @@ plugins/Corruption/players.dat
 plugins/Corruption/players.dat.temp
 plugins/PluginMetrics/
 plugins/Quests/data/*.yml
+plugins/mcMMO/FlatFileStuff/mcmmo.users
+plugins/mcMMO/backup/*.zip

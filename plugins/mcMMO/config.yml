@@ -1,0 +1,367 @@
+#
+#  mcMMO configuration
+#  Last updated on 1.4.02-b1755
+#
+#####
+
+#
+#  Settings for mcMMO in general
+###
+General:
+    Locale: en_US
+    MOTD_Enabled: true
+    #Amount of time (in minutes) to wait between saves of player information
+    Save_Interval: 10
+    #Allow mcMMO to report on basic anonymous usage
+    Stats_Tracking: true
+    #Allow mcMMO to check if a new version is available
+    Update_Check: true
+    Prefer_Beta: false
+    #Allow mcMMO to inform other plugins of damage being dealt
+    Event_Callback: true
+    #Allow mcMMO to create zip backups for flatfile data on shutdown.
+    Generate_Backups: true
+    Power_Level_Cap: 0
+    #Should mcMMO print out debug messages?
+    Verbose_Logging: false
+    #Should mcMMO over-write configs to update, or make new ones ending in .new?
+    Config_Update_Overwrite: true
+
+Database_Purging:
+    #Amount of time (in hours) to wait between database purging
+    #To only run at server start, set to 0
+    #To never run, set to -1
+    Purge_Interval: -1
+    #Any user who hasn't connected in this many months will be purged from the database
+    #To never purge old users, set to -1
+    Old_User_Cutoff: 6
+#
+#  Settings for using a mySQL database
+###
+MySQL:
+    Enabled: false
+    Database:
+        User_Name: UserName
+        User_Password: UserPassword
+        Name: DataBaseName
+        TablePrefix: mcmmo_
+    Server:
+        Port: 3306
+        Address: localhost
+#
+#  Settings for Hardcore mode
+###
+Hardcore:
+    Enabled: false
+    Death_Stat_Loss_Penalty_Percentage: 75
+    Vampirism: false
+    Vampirism_Stat_Leech_Percentage: 5
+
+#
+#  Settings for SMP Mods
+###
+Mods:
+    Tool_Mods_Enabled: false
+    Armor_Mods_Enabled: false
+    Block_Mods_Enabled: false
+    Entity_Mods_Enabled: false
+
+#
+#  Settings for mcMMO items
+###
+Items:
+    Chimaera_Wing:
+        Enabled: true
+        Feather_Cost: 10
+        Item_ID: 288
+
+#
+#  Settings for Parties
+###
+Party:
+    #Amount of time (in hours) to wait between automatically kicking old party members
+    #To only run at server start, set to 0
+    #To never kick old users, set to -1
+    AutoKick_Interval: 12
+    #Any user who hasn't connected in this many days will get kicked from their party
+    Old_Party_Member_Cutoff: 7
+    #Settings for party share modes
+    Sharing:
+        ExpShare_enabled: true
+        ExpShare_bonus_base: 1.1
+        ExpShare_bonus_increase: 1.05
+        ExpShare_bonus_cap: 1.5
+        ItemShare_enabled: true
+        Range: 75.0
+
+#
+#  Settings for Abilities
+###
+Abilities:
+    Enabled: true
+    Messages: true
+    Activation:
+        Only_Activate_When_Sneaking: false
+    Cooldowns:
+        Berserk: 240
+        Blast_Mining: 60
+        Giga_Drill_Breaker: 240
+        Green_Terra: 240
+        Serrated_Strikes: 240
+        Skull_Splitter: 240
+        Super_Breaker: 240
+        Tree_Feller: 240
+    Max_Seconds:
+        Berserk: 0
+        Blast_Mining: 0
+        Giga_Drill_Breaker: 0
+        Green_Terra: 0
+        Serrated_Strikes: 0
+        Skull_Splitter: 0
+        Super_Breaker: 0
+        Tree_Feller: 0
+    Limits:
+       Tree_Feller_Threshold: 500
+    Tools:
+        Durability_Loss_Enabled: true
+        Durability_Loss: 2
+
+#
+#  Settings for Skills
+#  Level cap of 0 for no limit
+###
+Skills:
+    Acrobatics:
+        Enabled_For_PVP: true
+        Enabled_For_PVE: true
+        Prevent_AFK_Leveling: true
+        Prevent_Dodge_Lightning: false
+        Level_Cap: 0
+    Archery:
+        Enabled_For_PVP: true
+        Enabled_For_PVE: true
+        Level_Cap: 0
+    Axes:
+        Enabled_For_PVP: true
+        Enabled_For_PVE: true
+        Level_Cap: 0
+    Excavation:
+        Level_Cap: 0
+    Fishing:
+        Drops_Enabled: true
+        Level_Cap: 0
+    Herbalism:
+        Level_Cap: 0
+        Prevent_AFK_Leveling: true
+    Mining:
+        Level_Cap: 0
+        Detonator_ID: 259
+    Repair:
+        Level_Cap: 0
+        Anvil_Messages: true
+        Anvil_ID: 42
+        Salvage_enabled: true
+        Salvage_Anvil_ID: 41
+        Salvage_UnlockLevel: 600
+        Salvage_tools: true
+        Salvage_armor: true
+    Smelting:
+        Level_Cap: 0
+    Swords:
+        Enabled_For_PVP: true
+        Enabled_For_PVE: true
+        Level_Cap: 0
+    Taming:
+        Enabled_For_PVP: true
+        Enabled_For_PVE: true
+        Level_Cap: 0
+        Call_Of_The_Wild:
+            Bones_Required: 10
+            Fish_Required: 10
+    Unarmed:
+        Enabled_For_PVP: true
+        Enabled_For_PVE: true
+        Level_Cap: 0
+        Block_Cracker:
+            SmoothBrick_To_CrackedBrick: true
+    Woodcutting:
+        Level_Cap: 0
+        Requires_Axe: true
+
+#
+#  Settings for Double Drops
+###
+Double_Drops:
+    Herbalism:
+        Brown_Mushroom: true
+        Cactus: true
+        Carrot: true
+        Cocoa: true
+        Crops: true
+        Melon_Block: true
+        Nether_Warts: true
+        Potato: true
+        Pumpkin: true
+        Red_Mushroom: true
+        Red_Rose: true
+        Sugar_Cane_Block: true
+        Vine: true
+        Water_Lily: true
+        Yellow_Flower: true
+    Mining:
+        Coal_Ore: true
+        Diamond_Ore: true
+        Emerald_Ore: true
+        Ender_Stone: true
+        Glowstone: true
+        Gold_Ore: true
+        Iron_Ore: true
+        Lapis_Ore: true
+        Mossy_Cobblestone: true
+        Netherrack: true
+        Obsidian: true
+        Redstone_Ore: true
+        Sandstone: true
+        Stone: true
+    Woodcutting:
+        Oak: true
+        Birch: true
+        Spruce: true
+        Jungle: true
+
+#
+#  Settings for XP distribution
+###
+Experience:
+    Gains:
+        Mobspawners:
+            Enabled: false
+        Multiplier:
+            PVP: 1.0
+            Global: 1.0
+    PVP:
+        Rewards: true
+    Formula:
+        Curve_Modifier: 20
+        Multiplier:
+            Swords: 1.0
+            Taming: 1.0
+            Acrobatics: 1.0
+            Excavation: 1.0
+            Herbalism: 1.0
+            Unarmed: 1.0
+            Woodcutting: 1.0
+            Mining: 1.0
+            Archery: 1.0
+            Axes: 1.0
+            Repair: 1.0
+            Fishing: 1.0
+    Fishing:
+        Base: 800
+    Excavation:
+        Clay: 40
+        Dirt: 40
+        Grass: 40
+        Gravel: 40
+        Mycel: 40
+        Sand: 40
+        Soul_Sand: 40
+    Woodcutting:
+        Oak: 70
+        Spruce: 80
+        Birch: 90
+        Jungle: 100
+        Huge_Mushroom_Red: 70
+        Huge_Mushroom_Brown: 70
+    Herbalism:
+        Brown_Mushroom: 150
+        Cactus: 30
+        Carrot: 50
+        Cocoa: 30
+        Crops: 50
+        Melon_Block: 20
+        Nether_Warts: 50
+        Potato: 50
+        Pumpkin: 20
+        Red_Mushroom: 150
+        Red_Rose: 100
+        Sugar_Cane_Block: 30
+        Vine: 10
+        Water_Lily: 100
+        Yellow_Flower: 100
+    Mining:
+        Coal_Ore: 100
+        Diamond_Ore: 750
+        Emerald_Ore: 1000
+        Ender_Stone: 150
+        Glowstone: 30
+        Gold_Ore: 350
+        Iron_Ore: 250
+        Lapis_Ore: 400
+        Mossy_Cobblestone: 30
+        Netherrack: 30
+        Obsidian: 150
+        Redstone_Ore: 150
+        Sandstone: 30
+        Stone: 30
+    Smelting:
+        Coal_Ore: 10
+        Diamond_Ore: 75
+        Emerald_Ore: 100
+        Gold_Ore: 35
+        Iron_Ore: 25
+        Lapis_Ore: 40
+        Redstone_Ore: 15
+    Taming:
+        Animal_Taming:
+            Wolf: 250
+            Ocelot: 500
+    Combat:
+        Multiplier:
+            Animals: 1.0
+            Creeper: 4.0
+            Skeleton: 3.0
+            Spider: 2.0
+            Giant: 4.0
+            Zombie: 2.0
+            Slime: 2.0
+            Ghast: 3.0
+            Pig_Zombie: 3.0
+            Enderman: 1.0
+            Cave_Spider: 3.0
+            Silverfish: 3.0
+            Blaze: 3.0
+            Magma_Cube: 2.0
+            Ender_Dragon: 8.0
+            Wither: 7.0
+            Witch: 4.0
+            Iron_Golem: 2.0
+            Wither_Skeleton: 4.0
+#
+#  Settings for commands
+###
+Commands:
+    mcmmo:
+        Donate_Message: true
+    ptp:
+        Cooldown: 30
+        Confirm_Required: true
+        Request_Timeout: 300
+        #If true, require players to have a mcmmo.commands.ptp.world.[WorldName] permission
+        #to teleport to, from, or within any given world.
+        World_Based_Permissions: false
+    p:
+        #Allow mcMMO to use player display names in chat instead of their usernames
+        Use_Display_Names: true
+    a:
+        #Allow mcMMO to use player display names in chat instead of their usernames
+        Use_Display_Names: true
+#
+#  Settings for particles
+###
+Particles:
+    Ability_Activation: true
+    Ability_Deactivation: true
+    Dodge: true
+    Bleed: true
+    Greater_Impact: true

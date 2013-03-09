@@ -9,17 +9,17 @@ lookup-with-display-names: true
 broadcast-changes: true
 
 # Disables some features to be compatible with badly-written server wrappers.
-crappy-wrapper-compat: true
+crappy-wrapper-compat: false
 
 # When this setting is enabled, CommandBook's commands will be registered AFTER every 
 # other plugin's commands. If any other plugin registers a command that conflicts with
 # one of CommandBook's commands, the CommandBook command will be accessible with 
 # /commandbook:<command>, and the other plugin's command will be accessible 
 # with /<command>
-low-priority-command-registration: false
+low-priority-command-registration: true
 
 # Give operators (set with the Minecraft /op command) all permissions.
-op-permissions: true
+op-permissions: false
 
 # A list of enabled and disabled components. Components in the disabled list 
 # will automatically be removed from the enabled list. Fully qualified class names can 

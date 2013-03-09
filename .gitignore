@@ -5,9 +5,9 @@ ops.txt
 white-list.txt
 server.log
 ignore/
-world/
-world_nether/
-world_the_end/
+/world/
+/world_nether/
+/world_the_end/
 plugins/CommandBook/bans.*
 plugins/CommandBook/sessions/*
 plugins/WorldEdit/worldedit.log

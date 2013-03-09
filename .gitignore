@@ -14,7 +14,6 @@ plugins/WorldEdit/worldedit.log
 plugins/WorldEdit/worldedit.log.*
 plugins/Herochat/chatters/*
 plugins/Herochat/logs/*
-
 plugins/Corruption/players.dat
-
 plugins/Corruption/players.dat.temp
+plugins/PluginMetrics/

@@ -3,7 +3,7 @@
 # For a reference for any variable inside this file, check out the bukkit wiki at
 # http://wiki.bukkit.org/Bukkit.yml
 settings:
-  allow-end: true
+  allow-end: false
   warn-on-overload: true
   permissions-file: permissions.yml
   update-folder: update

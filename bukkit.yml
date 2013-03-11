@@ -63,7 +63,7 @@ ticks-per:
   monster-spawns: 1
   autosave: 6000
 auto-updater:
-  enabled: true
+  enabled: false
   on-broken:
   - warn-console
   - warn-ops

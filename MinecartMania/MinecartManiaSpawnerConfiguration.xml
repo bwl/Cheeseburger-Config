@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<MinecartManiaConfiguration>
-    <!--Applying redstone to a block of this type with a rail on top of it will spawn and launch a minecart.-->
-    <MinecartSpawnBlock>57</MinecartSpawnBlock>
-    <!--Minecarts passing over this block will be destroyed unless redstone is applied to the block.-->
-    <MinecartDestroyBlock>56</MinecartDestroyBlock>
-    <!--The number of seconds to wait after spawning a minecart before allowing another minecart to be spawned (0 = no timeout).-->
-    <MinecartSpawnTimeout>1</MinecartSpawnTimeout>
-</MinecartManiaConfiguration>

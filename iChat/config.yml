@@ -1,7 +1,0 @@
-message-format: '+prefix+name+suffix&f: +message'
-censor-list: []
-censor-char: '*'
-censor-colored: true
-censor-color: '&7'
-censor-string-color: '&f'
-use-world-name: false

@@ -1,0 +1,12 @@
+# Quests config
+allow-command-questing: true
+allow-command-quests-with-npcs: false
+show-requirements: true
+allow-quitting: true
+debug-mode: false
+kill-delay: 600
+quester-blacklist:
+- SomeGuy12345
+- somePrefix*
+- '*someSuffix'
+- '*someRegex*'

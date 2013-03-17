@@ -1,0 +1,336 @@
+Blaze:
+  EntityType: Blaze
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 370:0 20.0 1 1
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 5.5
+    Damage: 2.0
+    Experience: 8.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+CaveSpider:
+  EntityType: CaveSpider
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 376:0 20.0 1 2
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 5.5
+    Damage: 3.0
+    Experience: 8.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+Creeper:
+  EntityType: Creeper
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 46:0 20.0 1 2
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 3.75
+    Damage: 2.0
+    Experience: 10.5
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+Enderman:
+  EntityType: Enderman
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 121:0 20.0 1 2
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 3.75
+    Damage: 2.0
+    Experience: 10.5
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+Ghast:
+  EntityType: Ghast
+  mcMMOXPBonus: 0
+  ReturnToSenderImmune: true
+  Loot:
+    FirstRoll:
+      FirstItem: 348:0 20.0 4 8
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 5.5
+    Damage: 2.0
+    Experience: 8.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+LavaSlime:
+  EntityType: LavaSlime
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 341:0 20.0 1 3
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 5.5
+    Damage: 2.0
+    Experience: 8.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+PigZombie:
+  EntityType: PigZombie
+  Aggressive: true
+  Baby: false
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 266:0 20.0 1 1
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 5.5
+    Damage: 2.0
+    Experience: 8.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+Silverfish:
+  EntityType: SilverFish
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 350:0 20.0 1 2
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 7.5
+    Damage: 4.0
+    Experience: 5.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+Skeleton:
+  EntityType: Skeleton
+  WitherSkeleton: false
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 261:0 3.5 1 1
+      SecondItem: 262:0 20.0 2 4
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 5.5
+    Damage: 2.0
+    Experience: 8.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+Slime:
+  EntityType: Slime
+  MinimumSize: 2
+  MaximumSize: 4
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 378:0 20.0 1 3
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 5.5
+    Damage: 2.0
+    Experience: 8.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+Spider:
+  EntityType: Spider
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 35:0 20.0 1 2
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 5.5
+    Damage: 3.0
+    Experience: 8.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+Witch:
+  EntityType: Witch
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 288:0 20.0 1 3
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 5.5
+    Damage: 2.0
+    Experience: 8.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+Wither:
+  EntityType: WitherBoss
+  HealthRegenPerSecond: 2
+  mcMMOXPBonus: 0
+  Spawn:
+    Probability: 25.0
+    SpawnerProbability: 0.0
+    MaxSpawnHeight: 256
+  Stats:
+    Health: 5.0
+    Damage: 1.0
+    Experience: 180.0
+  Loot:
+    netherstar:
+      netherstar: 399:0 100 1 1
+    diamonds:
+      diamond: 264:0 100 20 30
+  Immunity:
+    BlockExplosion: true
+    EntityExplosion: true
+    Fire: false
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Magic: true
+  HeroesKillingExperience: 0.0
+Zombie:
+  EntityType: Zombie
+  EquipmentSet: diamond
+  Baby: false
+  Villager: false
+  mcMMOXPBonus: 0
+  Loot:
+    FirstRoll:
+      FirstItem: 288:0 20.0 1 3
+  Spawn:
+    Probability: 3.0
+    SpawnerProbability: 1.0
+    MaxSpawnHeight: 256.0
+  Stats:
+    Health: 5.5
+    Damage: 2.0
+    Experience: 8.0
+  Immunity:
+    Fire: true
+    Lava: true
+    EnvironmentalFireTick: true
+    Fall: true
+    Contact: true
+    Drowning: true
+    Suffocation: true
+  HeroesKillingExperience: 0.0
+ConfigVersion: 2.1.1

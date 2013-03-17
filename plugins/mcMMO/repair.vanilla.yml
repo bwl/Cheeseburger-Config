@@ -1,0 +1,515 @@
+#
+# Any file named repair.*.yml in the mcmmmo folder will be loaded as a repair config
+# All repair configs have a main section titled "Repairables"
+# Afterwards, all sub-items are considered a Repairable to be loaded
+# The bare minimum of a Repairable is that it have an ItemId, a RepairMaterialId, and a MaximumDurability
+#
+# ItemId: This is the id of the item to be repairable.
+## This is required to be set.
+#
+# ItemType: This is the type of item to be repaired, this is only important to permissions.
+## Valid values are ARMOR, TOOL, and OTHER.
+## This defaults to OTHER.
+#
+# MaterialType: This is the type of the material of the item to be repaired, this is only important for permissions.
+## Valid values are STRING, LEATHER, WOOD, STONE, IRON, GOLD, DIAMOND, and OTHER
+## This defaults to OTHER.
+#
+# RepairMaterialId: This is the id of the item used to repair this repairable.
+## This is required to be set.
+#
+# RepairMaterialMetadata: This is the metadata of the item used to repair this repairable.
+## A value of -1 means to ignore all metadata when repairing.
+## This defaults to -1
+#
+# MaximumDurability: This is the maximum durability of the item.
+## This is required to be set.
+#
+# MinimumLevel: This is the minimum repair level needed to repair this item.
+## Valid values are > 0
+## This defaults to 0
+#
+# MinimumQuantity: This is the minimum number of items needed to repair this item ignoring all other repair bonuses.
+## This is typically the number of the repair material needed to create a new item, for example for a sword it is 2, for an axe it is 3
+## This defaults to 2
+#
+# XpMultiplier: This is the amount to multiply the xp bonus by.
+## This defaults to 1
+#
+#
+# The following is the default repair config that ships with mcMMO, it contains all vanilla items that are repairable.
+#
+#
+###
+Repairables:
+    #
+    # Wooden repairables
+    ###
+    # Tools
+    WoodSword:
+        ItemId: 268
+        ItemType: TOOL
+        MaterialType: WOOD
+        RepairMaterialId: 5
+        RepairMaterialMetadata: -1
+        MaximumDurability: 59
+        MinimumLevel: 0
+        MinimumQuantity: 2
+        XpMultiplier: .25
+    WoodShovel:
+        ItemId: 269
+        ItemType: TOOL
+        MaterialType: WOOD
+        RepairMaterialId: 5
+        RepairMaterialMetadata: -1
+        MaximumDurability: 59
+        MinimumLevel: 0
+        MinimumQuantity: 1
+        XpMultiplier: .16
+    WoodPickaxe:
+        ItemId: 270
+        ItemType: TOOL
+        MaterialType: WOOD
+        RepairMaterialId: 5
+        RepairMaterialMetadata: -1
+        MaximumDurability: 59
+        MinimumLevel: 0
+        MinimumQuantity: 3
+        XpMultiplier: .5
+    WoodAxe:
+        ItemId: 271
+        ItemType: TOOL
+        MaterialType: WOOD
+        RepairMaterialId: 5
+        RepairMaterialMetadata: -1
+        MaximumDurability: 59
+        MinimumLevel: 0
+        MinimumQuantity: 3
+        XpMultiplier: .5
+    WoodHoe:
+        ItemId: 290
+        ItemType: TOOL
+        MaterialType: WOOD
+        RepairMaterialId: 5
+        RepairMaterialMetadata: -1
+        MaximumDurability: 59
+        MinimumLevel: 0
+        MinimumQuantity: 2
+        XpMultiplier: .25
+    #
+    # Stone repairables
+    ###
+    # Tools
+    StoneSword:
+        ItemId: 272
+        ItemType: TOOL
+        MaterialType: STONE
+        RepairMaterialId: 4
+        RepairMaterialMetadata: -1
+        MaximumDurability: 131
+        MinimumLevel: 0
+        MinimumQuantity: 2
+        XpMultiplier: .25
+    StoneShovel:
+        ItemId: 273
+        ItemType: TOOL
+        MaterialType: STONE
+        RepairMaterialId: 4
+        RepairMaterialMetadata: -1
+        MaximumDurability: 131
+        MinimumLevel: 0
+        MinimumQuantity: 1
+        XpMultiplier: .16
+    StonePickaxe:
+        ItemId: 274
+        ItemType: TOOL
+        MaterialType: STONE
+        RepairMaterialId: 4
+        RepairMaterialMetadata: -1
+        MaximumDurability: 131
+        MinimumLevel: 0
+        MinimumQuantity: 3
+        XpMultiplier: .5
+    StoneAxe:
+        ItemId: 275
+        ItemType: TOOL
+        MaterialType: STONE
+        RepairMaterialId: 4
+        RepairMaterialMetadata: -1
+        MaximumDurability: 131
+        MinimumLevel: 0
+        MinimumQuantity: 3
+        XpMultiplier: .5
+    StoneHoe:
+        ItemId: 291
+        ItemType: TOOL
+        MaterialType: STONE
+        RepairMaterialId: 4
+        RepairMaterialMetadata: -1
+        MaximumDurability: 131
+        MinimumLevel: 0
+        MinimumQuantity: 2
+        XpMultiplier: .25
+    #
+    # Iron repairables
+    ###
+    # Tools
+    IronSword:
+        ItemId: 267
+        ItemType: TOOL
+        MaterialType: IRON
+        RepairMaterialId: 265
+        RepairMaterialMetadata: -1
+        MaximumDurability: 250
+        MinimumLevel: 0
+        MinimumQuantity: 2
+        XpMultiplier: .5
+    IronShovel:
+        ItemId: 256
+        ItemType: TOOL
+        MaterialType: IRON
+        RepairMaterialId: 265
+        RepairMaterialMetadata: -1
+        MaximumDurability: 250
+        MinimumLevel: 0
+        MinimumQuantity: 1
+        XpMultiplier: .3
+    IronPickaxe:
+        ItemId: 257
+        ItemType: TOOL
+        MaterialType: IRON
+        RepairMaterialId: 265
+        RepairMaterialMetadata: -1
+        MaximumDurability: 250
+        MinimumLevel: 0
+        MinimumQuantity: 3
+        XpMultiplier: 1
+    IronAxe:
+        ItemId: 258
+        ItemType: TOOL
+        MaterialType: IRON
+        RepairMaterialId: 265
+        RepairMaterialMetadata: -1
+        MaximumDurability: 250
+        MinimumLevel: 0
+        MinimumQuantity: 3
+        XpMultiplier: 1
+    IronHoe:
+        ItemId: 292
+        ItemType: TOOL
+        MaterialType: IRON
+        RepairMaterialId: 265
+        RepairMaterialMetadata: -1
+        MaximumDurability: 250
+        MinimumLevel: 0
+        MinimumQuantity: 2
+        XpMultiplier: .5
+    Shears:
+        ItemId: 359
+        ItemType: TOOL
+        MaterialType: IRON
+        RepairMaterialId: 265
+        RepairMaterialMetadata: -1
+        MaximumDurability: 238
+        MinimumLevel: 0
+        MinimumQuantity: 2
+        XpMultiplier: 1
+    # Armor
+    IronHelmet:
+        ItemId: 306
+        ItemType: ARMOR
+        MaterialType: IRON
+        RepairMaterialId: 265
+        RepairMaterialMetadata: -1
+        MaximumDurability: 165
+        MinimumLevel: 0
+        MinimumQuantity: 5
+        XpMultiplier: 2
+    IronChest:
+        ItemId: 307
+        ItemType: ARMOR
+        MaterialType: IRON
+        RepairMaterialId: 265
+        RepairMaterialMetadata: -1
+        MaximumDurability: 240
+        MinimumLevel: 0
+        MinimumQuantity: 8
+        XpMultiplier: 2
+    IronLegs:
+        ItemId: 308
+        ItemType: ARMOR
+        MaterialType: IRON
+        RepairMaterialId: 265
+        RepairMaterialMetadata: -1
+        MaximumDurability: 225
+        MinimumLevel: 0
+        MinimumQuantity: 7
+        XpMultiplier: 2
+    IronBoots:
+        ItemId: 309
+        ItemType: ARMOR
+        MaterialType: IRON
+        RepairMaterialId: 265
+        RepairMaterialMetadata: -1
+        MaximumDurability: 195
+        MinimumLevel: 0
+        MinimumQuantity: 4
+        XpMultiplier: 2
+    #
+    # Gold repairables
+    ###
+    # Tools
+    GoldSword:
+        ItemId: 283
+        ItemType: TOOL
+        MaterialType: GOLD
+        RepairMaterialId: 266
+        RepairMaterialMetadata: -1
+        MaximumDurability: 32
+        MinimumLevel: 0
+        MinimumQuantity: 2
+        XpMultiplier: 4
+    GoldShovel:
+        ItemId: 284
+        ItemType: TOOL
+        MaterialType: GOLD
+        RepairMaterialId: 266
+        RepairMaterialMetadata: -1
+        MaximumDurability: 32
+        MinimumLevel: 0
+        MinimumQuantity: 1
+        XpMultiplier: 2.6
+    GoldPickaxe:
+        ItemId: 285
+        ItemType: TOOL
+        MaterialType: GOLD
+        RepairMaterialId: 266
+        RepairMaterialMetadata: -1
+        MaximumDurability: 32
+        MinimumLevel: 0
+        MinimumQuantity: 3
+        XpMultiplier: 8
+    GoldAxe:
+        ItemId: 286
+        ItemType: TOOL
+        MaterialType: GOLD
+        RepairMaterialId: 266
+        RepairMaterialMetadata: -1
+        MaximumDurability: 32
+        MinimumLevel: 0
+        MinimumQuantity: 3
+        XpMultiplier: 8
+    GoldHoe:
+        ItemId: 294
+        ItemType: TOOL
+        MaterialType: GOLD
+        RepairMaterialId: 266
+        RepairMaterialMetadata: -1
+        MaximumDurability: 32
+        MinimumLevel: 0
+        MinimumQuantity: 2
+        XpMultiplier: 4
+    # Armor
+    GoldHelmet:
+        ItemId: 314
+        ItemType: ARMOR
+        MaterialType: GOLD
+        RepairMaterialId: 266
+        RepairMaterialMetadata: -1
+        MaximumDurability: 77
+        MinimumLevel: 0
+        MinimumQuantity: 5
+        XpMultiplier: 4
+    GoldChest:
+        ItemId: 315
+        ItemType: ARMOR
+        MaterialType: GOLD
+        RepairMaterialId: 266
+        RepairMaterialMetadata: -1
+        MaximumDurability: 112
+        MinimumLevel: 0
+        MinimumQuantity: 8
+        XpMultiplier: 4
+    GoldLegs:
+        ItemId: 316
+        ItemType: ARMOR
+        MaterialType: GOLD
+        RepairMaterialId: 266
+        RepairMaterialMetadata: -1
+        MaximumDurability: 105
+        MinimumLevel: 0
+        MinimumQuantity: 7
+        XpMultiplier: 4
+    GoldBoots:
+        ItemId: 317
+        ItemType: ARMOR
+        MaterialType: GOLD
+        RepairMaterialId: 266
+        RepairMaterialMetadata: -1
+        MaximumDurability: 91
+        MinimumLevel: 0
+        MinimumQuantity: 4
+        XpMultiplier: 4
+    #
+    # Diamond repairables
+    ###
+    # Tools
+    DiamondSword:
+        ItemId: 276
+        ItemType: TOOL
+        MaterialType: DIAMOND
+        RepairMaterialId: 264
+        RepairMaterialMetadata: -1
+        MaximumDurability: 1561
+        MinimumLevel: 50
+        MinimumQuantity: 2
+        XpMultiplier: .5
+    DiamondShovel:
+        ItemId: 277
+        ItemType: TOOL
+        MaterialType: DIAMOND
+        RepairMaterialId: 264
+        RepairMaterialMetadata: -1
+        MaximumDurability: 1561
+        MinimumLevel: 50
+        MinimumQuantity: 1
+        XpMultiplier: .3
+    DiamondPickaxe:
+        ItemId: 278
+        ItemType: TOOL
+        MaterialType: DIAMOND
+        RepairMaterialId: 264
+        RepairMaterialMetadata: -1
+        MaximumDurability: 1561
+        MinimumLevel: 50
+        MinimumQuantity: 3
+        XpMultiplier: 1
+    DiamondAxe:
+        ItemId: 279
+        ItemType: TOOL
+        MaterialType: DIAMOND
+        RepairMaterialId: 264
+        RepairMaterialMetadata: -1
+        MaximumDurability: 1561
+        MinimumLevel: 50
+        MinimumQuantity: 3
+        XpMultiplier: 1
+    DiamondHoe:
+        ItemId: 293
+        ItemType: TOOL
+        MaterialType: DIAMOND
+        RepairMaterialId: 264
+        RepairMaterialMetadata: -1
+        MaximumDurability: 1561
+        MinimumLevel: 50
+        MinimumQuantity: 2
+        XpMultiplier: .5
+    # Armor
+    DiamondHelmet:
+        ItemId: 310
+        ItemType: ARMOR
+        MaterialType: DIAMOND
+        RepairMaterialId: 264
+        RepairMaterialMetadata: -1
+        MaximumDurability: 363
+        MinimumLevel: 50
+        MinimumQuantity: 5
+        XpMultiplier: 6
+    DiamondChest:
+        ItemId: 311
+        ItemType: ARMOR
+        MaterialType: DIAMOND
+        RepairMaterialId: 264
+        RepairMaterialMetadata: -1
+        MaximumDurability: 528
+        MinimumLevel: 50
+        MinimumQuantity: 8
+        XpMultiplier: 6
+    DiamondLegs:
+        ItemId: 312
+        ItemType: ARMOR
+        MaterialType: DIAMOND
+        RepairMaterialId: 264
+        RepairMaterialMetadata: -1
+        MaximumDurability: 495
+        MinimumLevel: 50
+        MinimumQuantity: 7
+        XpMultiplier: 6
+    DiamondBoots:
+        ItemId: 313
+        ItemType: ARMOR
+        MaterialType: DIAMOND
+        RepairMaterialId: 264
+        RepairMaterialMetadata: -1
+        MaximumDurability: 429
+        MinimumLevel: 50
+        MinimumQuantity: 4
+        XpMultiplier: 6
+    #
+    # Leather repairables
+    ###
+    # Armor
+    LeatherHelmet:
+        ItemId: 298
+        ItemType: ARMOR
+        MaterialType: LEATHER
+        RepairMaterialId: 334
+        RepairMaterialMetadata: -1
+        MaximumDurability: 55
+        MinimumLevel: 0
+        MinimumQuantity: 5
+        XpMultiplier: 1
+    LeatherChest:
+        ItemId: 299
+        ItemType: ARMOR
+        MaterialType: LEATHER
+        RepairMaterialId: 334
+        RepairMaterialMetadata: -1
+        MaximumDurability: 80
+        MinimumLevel: 0
+        MinimumQuantity: 8
+        XpMultiplier: 1
+    LeatherLegs:
+        ItemId: 300
+        ItemType: ARMOR
+        MaterialType: LEATHER
+        RepairMaterialId: 334
+        RepairMaterialMetadata: -1
+        MaximumDurability: 75
+        MinimumLevel: 0
+        MinimumQuantity: 7
+        XpMultiplier: 1
+    LeatherBoots:
+        ItemId: 301
+        ItemType: ARMOR
+        MaterialType: LEATHER
+        RepairMaterialId: 334
+        RepairMaterialMetadata: -1
+        MaximumDurability: 65
+        MinimumLevel: 0
+        MinimumQuantity: 4
+        XpMultiplier: 1
+    #
+    # String repairables
+    ###
+    # Tools
+    FishingRod:
+        ItemId: 346
+        ItemType: TOOL
+        MaterialType: STRING
+        RepairMaterialId: 287
+        RepairMaterialMetadata: -1
+        MaximumDurability: 64
+        MinimumLevel: 0
+        MinimumQuantity: 2
+        XpMultiplier: .5
+    Bow:
+        ItemId: 261
+        ItemType: TOOL
+        MaterialType: STRING
+        RepairMaterialId: 287
+        RepairMaterialMetadata: -1
+        MaximumDurability: 384
+        MinimumLevel: 0
+        MinimumQuantity: 3
+        XpMultiplier: .5

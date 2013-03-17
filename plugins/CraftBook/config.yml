@@ -1,0 +1,228 @@
+# CraftBook Configuration for Bukkit. Generated for version: 1853-b49f30e
+# This configuration will automatically add new configuration options for you,
+# So there is no need to regenerate this configuration unless you need to.
+# More information about these configuration nodes are available at...
+# http://wiki.sk89q.com/wiki/CraftBook/Configuration
+
+
+
+# If this is set to false, all circuit mechanics will be disabled, and circuit configuration will not do anything.
+enable-circuits: true
+
+# If this is set to false, all mechanics will be disabled, and mechanism configuration will not do anything.
+enable-mechanisms: true
+
+# If this is set to false, all vehicles mechanics will be disabled, and vehicle configuration will not do anything.
+enable-vehicles: true
+
+# The default language for CraftBook.
+language: en_US
+
+# If on, OP's will not default to have access to everything.
+no-op-permissions: false
+
+# Causes many mechanics to require sufficient blocks to function, for example gates, bridges and doors.
+safe-destruction: true
+
+# Rounds all distance equations to the block grid.
+use-block-distance: false
+
+# Checks to see if WorldGuard allows building/using in the area when activating mechanics.
+check-worldguard-flags: true
+
+# Allows redstone not directly facing a mechanism to trigger said mechanism.
+indirect-redstone: false
+circuits:
+    ics:
+        enable: true
+        cache: true
+        allow-short-hand: true
+        max-radius: 15
+        keep-loaded: false
+        disallowed-ics: {}
+        default-coordinate-system: RELATIVE
+    wiring:
+        netherrack-enabled: false
+        pumpkins-enabled: false
+        glowstone-enabled: false
+        glowstone-off-block: 20
+    pipes:
+        enable: true
+        allow-diagonal: false
+        insulator-block: 35
+        stack-per-move: true
+mechanics:
+    ai:
+        enable: true
+        zombie-enable: true
+        skeleton-enable: true
+    ammeter:
+        enable: true
+        item: 263
+    area:
+        enable: true
+        allow-redstone: true
+        use-schematics: true
+        max-size: 5000
+        max-per-user: 30
+        shorten-long-names: true
+    bookcase:
+        enable: true
+        read-line: You pick up a book...
+        read-when-sneaking: false
+    bridge:
+        enable: true
+        allow-redstone: true
+        max-length: 30
+        max-width: 5
+        blocks:
+        - 4
+        - 5
+        - 20
+        - 43
+    cauldron:
+        enable: true
+        spoons: true
+    chair:
+        enable: true
+        require-sneak: true
+        regen-health: true
+        blocks:
+        - 53
+        - 67
+        - 108
+        - 109
+        - 114
+        - 128
+        - 134
+        - 135
+        - 136
+    chunk-anchor:
+        enable: true
+        enable-redstone: true
+        check-chunks: true
+    command-sign:
+        enable: true
+    cooking-pot:
+        enable: true
+        require-fuel: true
+        cook-ores: false
+        sign-click-open: true
+    custom-crafting:
+        enable: true
+    dispenser-recipes:
+        enable: true
+    custom-drops:
+        enable: true
+        require-permissions: false
+    door:
+        enable: true
+        allow-redstone: true
+        max-length: 30
+        max-width: 5
+        blocks:
+        - 4
+        - 5
+        - 20
+        - 43
+    elevator:
+        enable: true
+        enable-buttons: true
+        allow-looping: false
+    gate:
+        enable: true
+        allow-redstone: true
+        limit-columns: true
+        max-columns: 14
+        blocks:
+        - 85
+        - 101
+        - 102
+        - 113
+    hidden-switch:
+        enable: true
+        any-side: true
+    legacy-cauldron:
+        enable: true
+        block: 1
+    lightstone:
+        enable: true
+        item: 348
+    light-switch:
+        enable: true
+        max-range: 10
+        max-lights: 20
+    map-changer:
+        enable: true
+    paintings:
+        enable: true
+    payment:
+        enable: true
+    snow:
+        piling: false
+        trample: false
+        place: false
+        realistic: false
+        high-piling: false
+        jump-trample: false
+        slowdown: false
+    teleporter:
+        enable: true
+        require-sign: false
+        max-range: 0
+    xp-storer:
+        enable: true
+        block: 52
+    better-physics:
+        enable: false
+        falling-ladders: false
+    better-pistons:
+        enable: true
+        crushers: true
+        super-sticky: true
+        bounce: true
+        super-push: true
+        max-distance: 12
+vehicles:
+    minecart:
+        max-boost-block: '41:0'
+        25x-boost-block: '14:0'
+        50x-slow-block: '88:0'
+        20x-slow-block: '13:0'
+        reverse-block: '35:0'
+        station-block: '49:0'
+        sort-block: '87:0'
+        eject-block: '42:0'
+        deposit-block: '15:0'
+        teleport-block: '133:0'
+        lift-block: '112:0'
+        dispenser-block: '129:0'
+        messager-block: '121:0'
+        enter-on-impact: true
+        slow-when-empty: true
+        decay-when-empty: false
+        remove-on-exit: false
+        remove-entities: false
+        remove-entities-othercarts: false
+        max-speed-modifier: 1.0
+        off-rail-speed-modifier: 0.0
+        track-messages: true
+        decay-time: 20
+        constant-speed: 0.0
+        item-pickup-collision: false
+        pressure-plate-intersection: false
+        storage-place-rails: false
+    boat:
+        remove-entities: false
+        no-crash: false
+        remove-entities-otherboats: false
+        break-return-boat: false
+
+# WARNING! Changing this can result in all ST mechanics acting very weirdly, only change this if you know what you are doing!
+st-think-ticks: 2
+
+# Enables the update notifier. This checks for updates on start, and notifies anyone with the permission when they join. They can then use /cb update to download the update.
+notify-updates: true
+
+# Use advanced methods to detect if a player can build or not. Use this if you use region protections other than WorldGuard, or experience issues with WorldGuard protection.
+advanced-block-checks: false

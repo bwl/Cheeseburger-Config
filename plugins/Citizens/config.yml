@@ -1,0 +1,71 @@
+# Citizens Configuration
+
+npc:
+  chat:
+    options:
+      bystandersheartargetedchat: true
+      maxnumberoftargetstoshow: 2
+      multipletargetsformat: <target>|, <target>| & <target>| & others
+      range: 5
+    format:
+      notargets: '[<npc>]: <text>'
+      withtargettobystanders: '[<npc>] -> [<target>]: <text>'
+      totarget: '[<npc>] -> You: <text>'
+      withtargetstobystanders: '[<npc>] -> [<targets>]: <text>'
+  default:
+    lookclose:
+      enabled: false
+      range: 5
+    pathfinding:
+      range: 25.0
+    randomtalker: true
+    realisticlooking: false
+    stationaryticks: -1
+    talkclose:
+      enabled: false
+      range: 5
+    text:
+      '0': Hi, I'm <npc>!
+  limits:
+    defaultlimit: 10
+    maxpermissionchecks: 100
+    maxspeed: 100
+  chunks:
+    alwayskeeploaded: false
+  selection:
+    quickselect: false
+    item: '280'
+    message: <b>You selected <a><npc><b>!
+  player:
+    removefromlist: true
+  serverownership: false
+  text:
+    maxtalkcooldown: 1
+    mintalkcooldown: 1
+    talkitem: '340'
+  pathfinding:
+    usenewfinder: false
+advanced:
+  checkminecraftversion: true
+storage:
+  database:
+    driver: ''
+    password: ''
+    url: ''
+    username: ''
+  savetask:
+    delay: 72000
+  file: saves.yml
+  type: yaml
+general:
+  debugmode: false
+  colorscheme:
+    messagehighlight: <e>
+    message: <a>
+  translation:
+    locale: ''
+economy:
+  npc:
+    cost: 100.0
+subplugins:
+  folder: plugins

@@ -1,0 +1,17 @@
+ics:
+    MC0111:
+        per-player: false
+    MC1225:
+        requires-buckets: false
+    MC1226:
+        requires-buckets: false
+    MC0225:
+        requires-buckets: false
+    MC1111:
+        per-player: false
+    MC1110:
+        per-player: false
+    MC1263:
+        invert-output: false
+    MC0263:
+        invert-output: false

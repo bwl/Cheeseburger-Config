@@ -1,0 +1,469 @@
+# While the comments in here try to be helpful, the most up-to-date
+# documentation for these options can always be found on the web at:
+#
+# 'http://dev.bukkit.org/server-mods/homespawnplus/pages/config-params'
+#
+# This config_defaults.yml is NOT USED by HSP in any way and is
+# overwritten everytime HSP starts up. It is simply here for reference
+# to the full set of options available in HSP as well as their
+# default values. Copy any sections you want here into your config.yml
+# to make changes.
+
+# This defines which permission system HSP uses. Vault and WEPIF
+# (WEPIF is built into WorldEdit) are preferred, they both provide
+# a nice interface to all other permission systems. If you don't have
+# or don't want to use either of those, there is some native support
+# for a few other permission systems that you can use. These are
+# checked in the order they are listed for existence, and the
+# first one to match is used.
+permissions:
+  - vault
+  - wepif
+  - pex
+  - perm2-compat
+  - superperms
+  - ops
+
+core:
+  # EBEANS - Ebeans storage (will go to SqlLite or MySQL, as defined
+  #     by bukkit.yml)
+  # YAML - YAML storage in your plugins/HomeSpawnPlus directory.
+  #     Will store one file per data type (home, spawn, etc).
+  # YAML_SINGLE_FILE - YAML storage in your plugins/HomeSpawnPlus
+  #     directory. Stores all data in single "data.yml" file.
+  # PERSISTANCE_REIMPLEMENTED_EBEANS - use persitance reimplemented
+  #     ebeans implementation. Exactly like EBEANS above except with
+  #     a few extra benefits. http://goo.gl/rtdDH  To live-reload
+  #     with this, due to a Bukkit limitation, you must edit
+  #     plugin.yml and set 'database: false'
+  #
+  # This is one option that cannot be reloaded live with "/hsp rc",
+  # you must restart Bukkit if you change this option.
+  storage: EBEANS
+
+  # Warn on any known plugin conflicts that might prevent HSP from
+  # working the way the admin expects.
+  warnConflicts: true
+
+  # Warn if a strategy chain returns no location. While this might
+  # be intended behavior, it can also hint at a configuration mistake.
+  warnNullStrategy: true
+
+  # Warn if the player ended up somewhere other than where HSP
+  # expected. This often indicates another plugin doing something
+  # that you don't intend.
+  warnLocationChange: true
+
+  # if any strategy takes longer than this many millis to execute
+  # (1000 millis = 1 second), then print a performance warning.
+  # Set to 0 to disable.
+  warnPerformanceMillis: 250
+
+  # this is ONLY used when "ops" is used in the "permissions" section
+  # above.
+  # In that case, any permissions listed here are given to everyone by
+  # default (ops always have full permissions)
+#  defaultPermissions:
+#    - hsp.command.home.use 
+#    - hsp.command.sethome.use 
+
+  # set to true to enable players setting their homes by clicking beds.
+  # they must also have the 'hsp.home.bedsethome' permission.
+  bedsethome: true
+
+  # If true, HSP will require 2 clicks on the bed to set the home. This
+  # avoids accidentally setting your bedhome when you don't mean to.
+  bedhome2clicks: true
+
+  # If true, HSP will require it be night time in order for a bed home
+  # to be saved by clicking on it. (ie. single player mechanics)
+  bedHomeMustBeNight: false
+
+  # If set to true, the player will never see the "You can only
+  # sleep at night" message. Be warned this has the unfortunate side
+  # effect that they can never actually sleep in their bed, either.
+  bedHomeNeverDisplayNightMessage: false
+
+  # This restores the "original" behavior where all bed clicks go
+  # through (instead of supressing the first in 2click mode), which
+  # makes it possible to night sleep on first click and set home on
+  # 2 clicks. Note this is also possible without this option by
+  # the player using sneak to sleep vs. set home.
+  bedHomeOriginalBehavior: false
+ 
+  # The default/main world. Strategies reference this as the default
+  # world, you can change that here if you like.
+  defaultWorld: world
+
+  # set to true if you want plugin to change the spawn of the actual map
+  # (ie. even if you turn this plugin off later, whatever default spawn
+  # you set in various worlds will stay)
+  override_world: true
+
+  # if recordLastLogout is true, HSP will record the precise location
+  # location the player logged out at and respawn them there, instead
+  # of just letting Bukkit do it. This is an attempt to work around a
+  # bug where people logout close to a wall and Bukkit tries to respawn
+  # them in the wall
+  recordLastLogout: false
+
+  # set to true to have a bit more verbose logging in your server.log
+  # about what HomeSpawnPlus is doing
+  verboseLogging: false
+  # set to true to have verbose logging in your server.log as
+  # strategies are being evaluated - great for debugging and testing
+  # your strategies when you first set them up.
+  verboseStrategyLogging: false
+
+  # Event priority; the basic assumption is that you want HSP to
+  # be the final say in your onjoin/respawn event chains - if you
+  # didn't want that you probably wouldn't be running HSP in the
+  # first place. But you can change it here if you want to
+  # for some reason.
+  eventPriority: highest
+
+  # HSP has a notion of "default home" which the player can change
+  # by using /setdefaulthome. In the event that the player has
+  # deleted their defaultHome and only one home is remaining on
+  # a given world, this flag says to count that last home as the
+  # "default" home, even if it wasn't specifically flagged as
+  # the default.
+  lastHomeIsDefault: true
+
+  # localization. "en" for english, "fr" for french, etc. Will
+  # use given localization if it exists, otherwise will fall
+  # back to English as the default.
+  # locales available: en, de, fr, nl, ru, pt
+  locale: en
+
+  # default color of messages. ie. %yellow%, %red%, ..
+  defaultMessageColor: "%yellow%"
+
+  # set to true if Bukkit should be forced to reload the target
+  # chunk when a player teleports. This fixes "world hole" problems
+  # on teleport (exactly the same as BananaChunk plugin does).
+  # This option does nothing if BananaChunk is already installed.
+  reloadChunkOnTeleport: false
+
+  # Define the strategy HSP uses to determine if a player is new.
+  #   BUKKIT: use Bukkit Player.hasPlayedBefore() method
+  #   PLAYER_DAT: check for "player.dat" in the default world
+  #   ORIGINAL: use HSP's original algorithm, which first checks
+  #     HSP's database for any record, then falls back to a
+  #     PLAYER_DAT check. This can be faster since it's a cached
+  #     DB lookup instead of a file access, but it also means that
+  #     you can't test "new player" strategies simply by removing
+  #     the player.dat file.
+  newPlayerStrategy: PLAYER_DAT
+
+  # If enabled, "safe teleport" will be used for any teleport
+  # HSP does. This means if the players location is not "safe"
+  # (it has solid blocks that might suffocate them, is over lava,
+  # etc), they will be teleported to the nearest "safe" location
+  # instead.
+  safeTeleport: true
+
+  # If true, sleeping in a bed will overwrite the default home,
+  # usually the one set by "/sethome" with no args.
+  bedHomeOverwritesDefault: true
+
+  # Set to true if you use Multiverse and want to take advantage
+  # of HSP's event integration with it
+  multiverseEnabled: false
+
+  # set to true if you want to display teleporting messages
+  # when a player types /home or /spawn. See web docs for how
+  # to customize these messages: http://goo.gl/qhYmZ
+  teleportMessages: false
+
+# Web doc reference for event strategies:
+# http://dev.bukkit.org/server-mods/homespawnplus/pages/strategy-doc/
+#
+events:
+  # strategies to use when player is joining the game
+  onJoin:
+    - spawnNewPlayer
+    - default
+ 
+  # strategies to use when player is respawning after a death
+  onDeath:
+    - homeMultiWorld
+    - spawnLocalWorld
+
+  # strategies to use when player types "/spawn"
+  onSpawnCommand:
+    - spawnLocalWorld
+    - spawnDefaultWorld
+
+  # strategies to use when player types "/groupspawn"
+  onGroupSpawnCommand:
+    - spawnGroup
+
+  # strategies to use when player types "/home"
+  onHomeCommand:
+    - homeMultiWorld
+
+  # strategies to use when player types "/home name"
+  onNamedHomeCommand:
+    - homeNamedHome
+
+  # strategies to use when player types "/spawn name"
+  onNamedSpawnCommand:
+    - spawnNamedSpawn
+
+  # a crossWorld teleport that didn't involve Multiverse
+  crossWorldTeleport:
+    - default
+
+  # a crossWorld teleport by Multiverse
+  multiverseCrossWorldTeleport:
+    - default
+
+  # a non-crossWorld teleport by Multiverse
+  multiverseTeleport:
+    - default
+
+#  example of world-specific strategy
+#  world:
+#    myworld:
+#      onDeath:
+#        - homeLocalWorld
+#        - spawnLocalWorld
+#      onHomeCommand:
+#        - homeLocalWorld
+#
+#  example of permission-specific strategy
+#  permission:
+#    entry1:
+#      permissions:
+#        - my.special.permission
+#      onJoin:
+#        - homeSpecificWorld:specialworld
+#        - spawnSpecificWorld:specialworld
+#      onDeath:
+#        - homeMultiWorld
+#        - homeAnyWorld
+
+# you can define your own custom commands. Refer
+# to documentation on web: http://goo.gl/wCMM7
+commands:
+  # you can disable individual built-in commands here
+#  disabledCommands:
+#    - home
+#    - sethome
+#    - spawn
+
+# cooldowns for various commands can be defined here
+# A cooldown of 0 is no cooldown at all.
+cooldown:
+  home: 60
+  # if set, overrides "home" cooldown for named homes
+  home-named: 0
+ 
+  sethome: 0
+  # if set, overrides "sethome" cooldown for named homes
+  sethome-named: 0
+
+  spawn: 60
+  # if set, overrides "spawn" cooldown for named spawns
+  spawn-named: 0
+ 
+  groupspawn: 60
+
+  homeinvitetp: 60
+
+  # if set to true, cooldowns reset on death
+  resetOnDeath: false
+ 
+  # any cooldowns listed here will be on separate timers per
+  # command argument. for example if "home-named" is listed,
+  # then typing "/home home1" would start home1's cooldown,
+  # and "/home home2" will be on a separate cooldown.
+#  separation: 
+#  - home-named
+#  - spawn-named
+#  - sethome-named
+#  - homeinvitetp
+  
+#  example of world-specific cooldowns
+#  world:
+#    myworld:
+#      # whether this world should have its own cooldowns
+#      cooldownPerWorld: false
+#      home: 120
+#      spawn: 120
+#      # resetOnDeath can be per-world or even per-permission
+#      resetOnDeath: true
+#
+#  example of permission-specific cooldowns
+#  permission:
+#    entry1:
+#      # whether these permission should have their own cooldowns
+#      cooldownPerPermission: false
+#      permissions:
+#        - my.special.permission
+#      home: 30
+#      spawn: 30
+warmup:
+  # globally enable or disable warmups.
+  enabled: false
+ 
+  # set to true if movement should cancel a warmup
+  onMoveCancel: false
+
+  # set to true if receiving damage should cancel a warmup
+  onDamageCancel: false
+
+  # individual command warmup timers
+  home: 5
+  spawn: 5
+  groupspawn: 5
+ 
+#  example of world-specific warmups
+#  world:
+#    myworld:
+#      # whether this world should have its own warmups
+#      warmupPerWorld: false
+#      home: 10
+#      spawn: 10
+#
+#  example of permission-specific warmups
+#  permission:
+#    entry1:
+#      # whether these permission should have their own warmups
+#      warmupPerPermission: false
+#      permissions:
+#        - my.special.permission
+#      home: 15
+#      spawn: 15
+
+# ability to raise or lower the limit of homes you allow
+# players to have. Can be defined on a per-world or
+# per-permission basis. (-1 = unlimited)
+homeLimits:
+  # If singleGlobalHome is set, all other sections are ignored
+  # and a single global home is enforced. This means typing
+  # /sethome on any world will always work and it will always
+  # overwrite whatever other home you had set. This can be
+  # overridden by the permission "hsp.singleGlobalHomeExempt",
+  # in which case the limits defined below still apply.
+  singleGlobalHome: false
+
+  default:
+    perWorld: 1
+    global: -1
+
+#  world:
+#    myworld:
+#      perWorld: 5
+#  permission:
+#    limit1:
+#      permissions:
+#        - my.custom.perm
+#        - group.mygroup
+#      perWorld: 3
+#      global: 10
+
+# If you have Vault installed, HSP can use that to charge prices for
+# commands using whatever economy plugin you happen to have installed.
+# Costs will not work if you do not have Vault installed.
+#
+# http://dev.bukkit.org/server-mods/vault/
+cost:
+  # if verbose is true, the player will get a message stating that their
+  # account has been charged whenever they use a command with a cost.
+  verbose: true
+  home: 0
+  sethome: 0
+  spawn: 0
+  groupspawn: 0
+  # if sethome-multiplier is non-zero, then each additional home past
+  # the first (globally) will cost this much more. Example: sethome cost
+  # is 500, sethome-multiplier is 1.5. First home will cost 500, second
+  # will cost (500*1.5) = 750. 3rd home will cost (500*1.5*1.5) = 1125.
+  # 4th home is (500*1.5*1.5*1.5) = 1687.5, and so on.
+  sethome-multiplier: 0
+
+#  world:
+#    myworld:
+#      home: 100
+#  permission:
+#    limit1:
+#      permissions:
+#        - my.custom.perm
+#        - group.mygroup
+#      home: 250
+#      sethome: 500
+
+homeInvite:
+  # timeout (in seconds) for temporary invites
+  timeout: 30
+
+  # set to true if you want /homeinviteaccept and /homeinviteteleport
+  # to use the same cooldown as /home. This respects any home-separation
+  # settings you have.
+  useHomeCooldown: true
+  # same as above, but for warmups
+  useHomeWarmup: true
+
+  # set to false if you don't want to allow
+  # players to send invite for bedHomes
+  allowBedHomeInvites: true
+
+# HSP/dynmap integration. Features heavily borrowed from Mike Primm's
+# excellent Commandbook/dynmap integration, so please refer to that
+# for any documentation of config options. http://goo.gl/SLXOL
+dynmap:
+  # Set to true to enable this module, otherwise it is completely
+  # disabled
+  enabled: false
+
+  update:
+    # Seconds between position updates
+    period: 300.0
+    
+  layer:
+    homes:
+      enable: true
+      # by default, HSP will render the default home. You can also tell
+      # it to render any bed homes or even all named homes
+      include-bed-home: true
+      include-named-homes: true
+      name: "Homes"
+      # Make home layer hidden by default
+      hidebydefault: false
+      # ordering priority in layer menu (low goes before high - default is 0)
+      layerprio: 20
+      # (optional) set minimum zoom level when mob icons should be visible (0=default, any zoom)
+      minzoom: 0
+      # Default icon for home markers
+      deficon: house
+      # Label format - substitute %name% for player's name
+      labelfmt: "%name%"
+      # (optional) List of visible homes (by user ID) - if non-empty, only these will be shown.
+      # To show all homes on a given world, include "world:<worldname>" in the string list
+      visiblemarkers: []
+      # (optional) List of hidden homes (by user ID)
+      # To hide all homes on a given world, include "world:<worldname>" in the string list
+      hiddenmarkers: []
+      # (optional) If set to true, only show homes of online players
+      online-only: false
+    spawns:
+      enable: true
+      name: "Spawns"
+      # Make warp layer hidden by default
+      hidebydefault: false
+      # ordering priority in layer menu (low goes before high - default is 0)
+      layerprio: 21
+      # (optional) set minimum zoom level when mob icons should be visible (0=default, any zoom)
+      minzoom: 0
+      # Default icon for warp markers
+      deficon: world
+      # Label format - substitute %name% for warp's name
+      labelfmt: "[%name%]"
+      # (optional) List of visible spawns (by spawn name) - if non-empty, only these will be shown.
+      # To show all spawns on a given world, include "world:<worldname>" in the string list
+      visiblemarkers: []
+      # (optional) List of hidden spawns (by spawn name)
+      # To hide all spawns on a given world, include "world:<worldname>" in the string list
+      hiddenmarkers: []

@@ -1,0 +1,110 @@
+# While the comments in here try to be helpful, the most up-to-date
+# documentation for these options can always be found on the web at:
+#
+# 'http://dev.bukkit.org/server-mods/homespawnplus/pages/config-params'
+#
+# This is the simplified "basic" configuration. See the
+# "config_defaults.yml" file for full options listing.
+
+core:
+  # EBEANS - Use SqlLite or MySQL, as defined by bukkit.yml
+  # YAML - Use yaml storage files
+  storage: EBEANS
+
+  # set to true to enable players setting their homes by clicking beds.
+  # they must also have the 'hsp.home.bedsethome' permission.
+  bedsethome: true
+ 
+  # locales available: en, de, fr, nl, ru, pt
+  locale: en
+
+  verboseLogging: false
+  verboseStrategyLogging: false
+
+  # HSP warnings which help you find possible errors in your config.
+  # Leave on unless you're getting warnings in your server.log that
+  # you know you want to disable & ignore.
+  warnConflicts: false
+  warnNullStrategy: true
+  warnLocationChange: true
+
+# Web doc reference for event strategies:
+# http://dev.bukkit.org/server-mods/homespawnplus/pages/strategy-doc/
+#
+events:
+  # strategies to use when player is joining the game
+  onJoin:
+    - spawnNewPlayer
+    - default
+ 
+  # strategies to use when player is respawning after a death
+  onDeath:
+    - homeMultiWorld
+    - spawnLocalWorld
+
+  # strategies to use when player types "/spawn"
+  onSpawnCommand:
+    - spawnLocalWorld
+    - spawnDefaultWorld
+
+  # strategies to use when player types "/groupspawn"
+  onGroupSpawnCommand:
+    - spawnGroup
+
+  # strategies to use when player types "/home"
+  onHomeCommand:
+    - homeMultiWorld
+
+# cooldowns for various commands can be defined here
+# A cooldown of 0 is no cooldown at all.
+cooldown:
+  home: 60
+  spawn: 60
+  groupspawn: 60
+
+warmup:
+  # globally enable or disable warmups.
+  enabled: false
+ 
+  # set to true if movement should cancel a warmup
+  onMoveCancel: false
+
+  # set to true if receiving damage should cancel a warmup
+  onDamageCancel: false
+
+  # individual command warmup timers
+  home: 5
+  spawn: 5
+  groupspawn: 5
+
+# Define limits on number of homes (-1 = unlimited)
+homeLimits:
+  # If true, players can only have a single global home (set
+  # either by /sethome or a bed)
+  singleGlobalHome: false
+
+  default:
+    perWorld: 1
+    global: -1
+
+# If you have Vault installed, HSP can use that to charge prices for
+# commands using whatever economy plugin you happen to have installed.
+# Costs will not work if you do not have Vault installed.
+#
+# http://dev.bukkit.org/server-mods/vault/
+cost:
+  # if verbose is true, the player will get a message stating that their
+  # account has been charged whenever they use a command with a cost.
+  verbose: true
+
+  home: 0
+  sethome: 0
+  spawn: 0
+  groupspawn: 0
+
+# If you want to use home invites, please read documentation:
+# http://goo.gl/sc6oa
+homeInvite:
+  timeout: 30
+  useHomeCooldown: true
+  useHomeWarmup: true

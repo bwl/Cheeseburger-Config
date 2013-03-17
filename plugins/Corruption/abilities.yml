@@ -1,0 +1,106 @@
+AP25:
+  Type: ArmorPierce
+  Message: '&4Corrupted {BOSSNAME} used Armor Pierce.'
+  ActivationChance: 10.0
+  AssignationChance: 100.0
+  MinimumRange: 0
+  MaximumRange: 16
+  Value: 25.0
+  ActivationConditions:
+  - OnAttack
+FP2:
+  Type: FirePunch
+  Message: '&4Corrupted {BOSSNAME} used Fire Punch.'
+  ActivationChance: 15.0
+  AssignationChance: 100.0
+  MinimumRange: 0
+  MaximumRange: 16
+  Ticks: 2
+  ActivationConditions:
+  - OnAttack
+KB2:
+  Type: Knockback
+  Message: '&4Corrupted {BOSSNAME} used Knockback.'
+  ActivationChance: 25.0
+  AssignationChance: 100.0
+  MinimumRange: 0
+  MaximumRange: 16
+  VerticalCoef: 2.0
+  HorizontalCoef: 3.0
+  ActivationConditions:
+  - OnAttack
+PO3:
+  Type: Potion
+  Message: '&4Corrupted {BOSSNAME} used slowness.'
+  Effect: slow
+  Target: other
+  ActivationChance: 25.0
+  AssignationChance: 100.0
+  MinimumRange: 0
+  MaximumRange: 16
+  Amplifier: 2
+  Duration: 3.0
+  ActivationConditions:
+  - OnAttack
+  - OnDefense
+B2:
+  Type: Bomb
+  Message: '&4Corrupted {BOSSNAME} planted a bomb.'
+  ActivationChance: 15.0
+  AssignationChance: 100.0
+  MinimumRange: 0
+  MaximumRange: 16
+  Cooldown: 7.5
+  Fuse: 80
+  ExplosionRadius: 3
+  ActivationConditions:
+  - OnAttack
+  - OnDefense
+LA10:
+  Type: LightningAura
+  Message: '&4Corrupted {BOSSNAME} struck his enemies by lightning'
+  ActivationChance: 5.0
+  AssignationChance: 100.0
+  MinimumRange: 0
+  MaximumRange: 16
+  Cooldown: 10.0
+  AttackRadius: 10
+  Damage: 2
+  ActivationConditions:
+  - OnAttack
+TP:
+  Type: Teleport
+  Message: '&4Corrupted {BOSSNAME} teleported you'
+  CenteredOnFoe: true
+  ActivationChance: 5.0
+  AssignationChance: 100.0
+  MinimumRange: 5
+  MaximumRange: 25
+  Cooldown: 2.0
+  ActivationConditions:
+  - OnAttack
+TP2:
+  Type: Teleport
+  Message: '&4Corrupted {BOSSNAME} pulls you closer'
+  CenteredOnFoe: false
+  ActivationChance: 5.0
+  AssignationChance: 100.0
+  MinimumRange: 5
+  MaximumRange: 25
+  Cooldown: 2.0
+  ActivationConditions:
+  - OnAttack
+S:
+  Type: Snare
+  Message: '&4Corrupted {BOSSNAME} caught you'
+  Duration: 100
+  Destructible: true
+  Radius: 3
+  ActivationChance: 2.0
+  AssignationChance: 100.0
+  MinimumRange: 5
+  MaximumRange: 25
+  Cooldown: 3.0
+  ActivationConditions:
+  - OnDefense
+ConfigVersion: 2.1.1
